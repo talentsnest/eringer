@@ -50,3 +50,13 @@ public/videos/*_backup.*
 public/videos/*_backup.mp4
 public/videos/*_backup.webm
 
+# Unnecessary files
+*.docx
+*.csv
+*.zip
+*.sql
+public/videos/*.docx
+public/videos/*.csv
+public/videos/*.zip
+public/images/*.sql
+
