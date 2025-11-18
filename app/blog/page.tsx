@@ -11,7 +11,7 @@ const blogPosts = [
     excerpt: 'Discover why this rare Alpine flower has become a cornerstone of luxury skincare and how its unique properties can transform your skin.',
     image: 'https://images.unsplash.com/photo-1598439210625-5067c578f3f6?q=80&w=800',
     category: 'Ingredients',
-    date: 'January 14, 2025',
+    date: 'November 17, 2025',
     readTime: '5 min read',
   },
   {
@@ -20,7 +20,7 @@ const blogPosts = [
     excerpt: 'Expert tips for creating a skincare routine that works for your unique needs and fits seamlessly into your busy lifestyle.',
     image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200',
     category: 'Skincare Tips',
-    date: 'January 7, 2025',
+    date: 'November 10, 2025',
     readTime: '7 min read',
   },
   {
@@ -29,7 +29,7 @@ const blogPosts = [
     excerpt: 'How we maintain our commitment to the environment while delivering luxury skincare that meets the highest standards.',
     image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800',
     category: 'Sustainability',
-    date: 'December 31, 2024',
+    date: 'November 3, 2025',
     readTime: '6 min read',
   },
   {
@@ -38,7 +38,7 @@ const blogPosts = [
     excerpt: 'A comprehensive guide to identifying your skin type and choosing the right products for optimal results.',
     image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800',
     category: 'Skincare Tips',
-    date: 'December 24, 2024',
+    date: 'October 27, 2025',
     readTime: '8 min read',
   },
   {
@@ -47,7 +47,7 @@ const blogPosts = [
     excerpt: 'Explore the latest research in anti-aging skincare and how Swiss precision brings these innovations to life.',
     image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800',
     category: 'Science',
-    date: 'December 17, 2024',
+    date: 'October 20, 2025',
     readTime: '10 min read',
   },
   {
@@ -56,7 +56,7 @@ const blogPosts = [
     excerpt: 'Learn about the unique properties of Alpine plants and why they\'re so effective in skincare formulations.',
     image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=800',
     category: 'Ingredients',
-    date: 'December 10, 2024',
+    date: 'October 13, 2025',
     readTime: '6 min read',
   },
 ]

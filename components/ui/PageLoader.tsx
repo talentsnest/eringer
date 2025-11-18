@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { useLoader } from '@/contexts/LoaderContext'
 
@@ -9,6 +9,48 @@ export default function PageLoader() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const hasInitializedRef = useRef(false)
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const minDisplayTimeRef = useRef(false)
+  const hasStartedFadeOutRef = useRef(false)
+
+  // Fonction helper pour démarrer le fade-out avec respect du délai minimum
+  const startFadeOutSafe = useCallback(() => {
+    if (hasStartedFadeOutRef.current) return
+    hasStartedFadeOutRef.current = true
+
+    // Attendre le délai minimum si nécessaire
+    const checkAndFadeOut = () => {
+      if (!minDisplayTimeRef.current) {
+        setTimeout(checkAndFadeOut, 100)
+        return
+      }
+      
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
+      setFadeOut(true)
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 1000)
+    }
+    
+    checkAndFadeOut()
+  }, [setFadeOut, setIsLoading])
+
+  // Minimum d'affichage pour s'assurer que le loader est visible même avec cache
+  useEffect(() => {
+    if (!isLoading) {
+      minDisplayTimeRef.current = false
+      hasStartedFadeOutRef.current = false
+      return
+    }
+    
+    // Délai minimum de 800ms pour que le loader soit visible
+    const minDisplayTimer = setTimeout(() => {
+      minDisplayTimeRef.current = true
+    }, 800)
+
+    return () => {
+      clearTimeout(minDisplayTimer)
+    }
+  }, [isLoading])
 
   // Gérer la vidéo quand elle est montée
   useEffect(() => {
@@ -18,8 +60,7 @@ export default function PageLoader() {
     if (!video) {
       // Si pas de vidéo, fermer le loader après un court délai
       timeoutRef.current = setTimeout(() => {
-        setFadeOut(true)
-        setTimeout(() => setIsLoading(false), 1000)
+        startFadeOutSafe()
       }, 500)
       return () => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current)
@@ -38,11 +79,7 @@ export default function PageLoader() {
     const startFadeOut = () => {
       if (hasEnded) return
       hasEnded = true
-      if (timeoutRef.current) clearTimeout(timeoutRef.current)
-      setFadeOut(true)
-      setTimeout(() => {
-        setIsLoading(false)
-      }, 1000)
+      startFadeOutSafe()
     }
 
     // Gérer la fin de la vidéo
@@ -94,7 +131,7 @@ export default function PageLoader() {
         video.removeEventListener('ended', handleVideoEnd)
       }
     }
-  }, [isLoading, setFadeOut, setIsLoading])
+  }, [isLoading, setFadeOut, setIsLoading, startFadeOutSafe])
 
   // Reset quand isLoading change
   useEffect(() => {
@@ -139,13 +176,11 @@ export default function PageLoader() {
             }
           }}
           onEnded={() => {
-            setFadeOut(true)
-            setTimeout(() => setIsLoading(false), 1000)
+            startFadeOutSafe()
           }}
           onError={() => {
             console.error('Erreur de chargement vidéo loader')
-            setFadeOut(true)
-            setTimeout(() => setIsLoading(false), 1000)
+            startFadeOutSafe()
           }}
         >
           <source src="/videos/loader.mp4" type="video/mp4" />

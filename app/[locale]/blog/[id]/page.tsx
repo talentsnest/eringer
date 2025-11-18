@@ -12,7 +12,7 @@ const getBlogPostById = (id: string) => {
       title: 'The Power of Edelweiss in Skincare',
       image: 'https://images.unsplash.com/photo-1598439210625-5067c578f3f6?q=80&w=1200',
       category: 'Ingredients',
-      date: 'January 14, 2025',
+      date: 'November 17, 2025',
       readTime: '5 min read',
       author: 'Dr. Sophie Martin',
       content: `
