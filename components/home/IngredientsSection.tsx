@@ -197,14 +197,16 @@ export default function IngredientsSection() {
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
-                      {ingredient.name}
-                    </h3>
-                    {ingredient.description && ingredient.description.trim() !== '' && (
-                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1">
-                        {ingredient.description}
-                      </p>
-                    )}
+                    <div className="flex-1 flex flex-col">
+                      <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
+                        {ingredient.name}
+                      </h3>
+                      {ingredient.description && ingredient.description.trim() !== '' ? (
+                        <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1 flex-1">
+                          {ingredient.description}
+                        </p>
+                      ) : null}
+                    </div>
 
                     {/* Decorative Element */}
                     <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
@@ -239,14 +241,16 @@ export default function IngredientsSection() {
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
-                      {ingredient.name}
-                    </h3>
-                    {ingredient.description && ingredient.description.trim() !== '' && (
-                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1">
-                        {ingredient.description}
-                      </p>
-                    )}
+                    <div className="flex-1 flex flex-col">
+                      <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
+                        {ingredient.name}
+                      </h3>
+                      {ingredient.description && ingredient.description.trim() !== '' ? (
+                        <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1 flex-1">
+                          {ingredient.description}
+                        </p>
+                      ) : null}
+                    </div>
 
                     {/* Decorative Element */}
                     <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
@@ -281,14 +285,16 @@ export default function IngredientsSection() {
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
-                      {ingredient.name}
-                    </h3>
-                    {ingredient.description && ingredient.description.trim() !== '' && (
-                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1">
-                        {ingredient.description}
-                      </p>
-                    )}
+                    <div className="flex-1 flex flex-col">
+                      <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
+                        {ingredient.name}
+                      </h3>
+                      {ingredient.description && ingredient.description.trim() !== '' ? (
+                        <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1 flex-1">
+                          {ingredient.description}
+                        </p>
+                      ) : null}
+                    </div>
 
                     {/* Decorative Element */}
                     <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
