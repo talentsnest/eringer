@@ -12,50 +12,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       
-      - name: Trigger Vercel Deployment via Deploy Hook
+      - name: Trigger Vercel Deployment
         run: |
           if [ -z "${{ secrets.VERCEL_DEPLOY_HOOK }}" ]; then
             echo "❌ Error: VERCEL_DEPLOY_HOOK secret is not set"
-            echo "Please create a Deploy Hook in Vercel and add it as a secret in GitHub"
             exit 1
           fi
           
-          echo "🚀 Triggering Vercel deployment via Deploy Hook..."
+          echo "🚀 Triggering Vercel deployment..."
+          response=$(curl -s -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}")
+          echo "Response: $response"
           
-          response=$(curl -s -w "\n%{http_code}" -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}")
-          http_code=$(echo "$response" | tail -n1)
-          body=$(echo "$response" | sed '$d')
-          
-          if [ "$http_code" -eq 200 ] || [ "$http_code" -eq 201 ]; then
-            echo "✅ Deploy Hook triggered successfully!"
-            echo "Response: $body"
-            
-            # Extract job ID if available
-            job_id=$(echo "$body" | grep -o '"id":"[^"]*"' | cut -d'"' -f4 || echo "")
-            if [ -n "$job_id" ]; then
-              echo "Job ID: $job_id"
-              echo "Note: The deployment should appear in Vercel dashboard shortly."
-            fi
+          if echo "$response" | grep -q '"job"'; then
+            echo "✅ Deployment job created successfully!"
           else
-            echo "❌ Failed to trigger deployment. HTTP code: $http_code"
-            echo "Response: $body"
-            exit 1
+            echo "⚠️ Unexpected response from Vercel"
           fi
-      
-      - name: Alternative - Trigger via Vercel API (if Deploy Hook doesn't work)
-        if: failure()
-        run: |
-          echo "⚠️ Deploy Hook method failed, trying alternative method..."
-          echo "Note: This requires VERCEL_TOKEN and VERCEL_PROJECT_ID secrets"
-          
-          if [ -z "${{ secrets.VERCEL_TOKEN }}" ] || [ -z "${{ secrets.VERCEL_PROJECT_ID }}" ]; then
-            echo "❌ VERCEL_TOKEN or VERCEL_PROJECT_ID not set. Skipping alternative method."
-            exit 1
-          fi
-          
-          echo "🚀 Triggering deployment via Vercel API..."
-          curl -X POST "https://api.vercel.com/v13/deployments" \
-            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d "{\"projectId\":\"${{ secrets.VERCEL_PROJECT_ID }}\",\"gitSource\":{\"type\":\"github\",\"repo\":\"talentsnest/eringer\",\"ref\":\"main\"}}"
 
