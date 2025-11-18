@@ -1,32 +1,32 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useLoader } from '@/contexts/LoaderContext'
 
 export default function PageLoader() {
   const { isLoading, setIsLoading, fadeOut, setFadeOut } = useLoader()
   const videoRef = useRef<HTMLVideoElement>(null)
   const hasInitializedRef = useRef(false)
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
-  // Callback ref pour s'assurer que la vidéo est montée
-  const setVideoRef = (video: HTMLVideoElement | null) => {
-    videoRef.current = video
-    
+  // Gérer la vidéo quand elle est montée
+  useEffect(() => {
+    const video = videoRef.current
     if (!video || !isLoading || hasInitializedRef.current) return
+    
     hasInitializedRef.current = true
 
     // Set video playback speed to 2x
     video.playbackRate = 2
 
     let hasEnded = false
-    let timeoutId: NodeJS.Timeout | null = null
 
     // Fonction pour démarrer le fade-out
     const startFadeOut = () => {
       if (hasEnded) return
       hasEnded = true
-      if (timeoutId) clearTimeout(timeoutId)
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
       setFadeOut(true)
       setTimeout(() => {
         setIsLoading(false)
@@ -54,7 +54,7 @@ export default function PageLoader() {
     video.addEventListener('loadeddata', forcePlay, { once: true })
 
     // Fallback agressif : passer au contenu après 1.5 secondes max
-    timeoutId = setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       if (!hasEnded) {
         console.warn('Timeout vidéo loader, passage au contenu')
         startFadeOut()
@@ -72,7 +72,15 @@ export default function PageLoader() {
         }
       }, 200)
     }
-  }
+
+    // Cleanup
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+      }
+      video.removeEventListener('ended', handleVideoEnd)
+    }
+  }, [isLoading, setFadeOut, setIsLoading])
 
   // Reset quand isLoading change
   useEffect(() => {
@@ -100,7 +108,7 @@ export default function PageLoader() {
         className="w-full h-full flex items-center justify-center"
       >
         <video
-          ref={setVideoRef}
+          ref={videoRef}
           className="w-1/3 h-1/3 object-contain"
           autoPlay
           muted
