@@ -55,7 +55,7 @@ const getBestSellers = (baseUrl: string, translations: any, locale: string) => {
     {
       id: '10',
       ...getProductData('serum-anti-cernes'),
-      price: 69,
+      price: 45,
       image: '/images/serum-anti-cernes.png',
       hoverVideo: '/videos/serum-anti-cernes.mp4',
       badge: translations.common?.bestSeller || 'Best Seller',
@@ -63,7 +63,7 @@ const getBestSellers = (baseUrl: string, translations: any, locale: string) => {
     {
       id: '8',
       ...getProductData('creme-eclat'),
-      price: 75,
+      price: 59,
       image: '/images/creme-visage-eclat.png',
       hoverVideo: '/videos/creme-visage.mp4',
       badge: translations.common?.bestSeller || 'Best Seller',
@@ -71,7 +71,7 @@ const getBestSellers = (baseUrl: string, translations: any, locale: string) => {
     {
       id: '14',
       ...getProductData('serum-perles'),
-      price: 94,
+      price: 89,
       image: '/images/product2.png',
       hoverVideo: '/videos/product2-2.mp4',
       badge: translations.common?.bestSeller || 'Best Seller',
