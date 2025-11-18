@@ -32,39 +32,65 @@ const ingredientIcons: Record<string, any> = {
   theVert: GiCactus,
   varech: GiHerbsBundle,
   murierBlanc: GiHerbsBundle,
+  cacao: GiOlive,
+  cafeine: GiHerbsBundle,
+  carthame: GiSunflower,
+  cireAbeille: GiHoneyJar,
+  coco: GiOlive,
+  framboise: GiFruitBowl,
+  glycerine: GiWaterDrop,
+  citrouille: GiFruitBowl,
+  amande: GiOlive,
+  framboiseSeed: GiFruitBowl,
+  noix: GiOlive,
+  saccharide: GiWaterDrop,
+  macadamia: GiOlive,
+  mauve: GiFlowerPot,
+  peptides: GiHerbsBundle,
+  vanille: GiFlowerPot,
 }
 
-const ingredientKeys = [
-  'edelweiss',
-  'reishi',
-  'aloeVera',
-  'immortelle',
-  'avocat',
-  'grenade',
-  'pivoine',
-  'vigneRouge',
-  'echinacee',
-  'papaye',
-  'acmella',
-  'cristeMarine',
-  'jojoba',
-  'theVert',
-  'varech',
-  'murierBlanc',
+// Liste complète de 30 ingrédients avec noms courts
+const allIngredients = [
+  { key: 'edelweiss', name: 'Edelweiss', icon: GiFlowerEmblem },
+  { key: 'reishi', name: 'Reishi', icon: GiMushroomGills },
+  { key: 'aloeVera', name: 'Aloe Vera', icon: GiCactus },
+  { key: 'immortelle', name: 'Immortelle', icon: GiSunflower },
+  { key: 'avocat', name: 'Avocado', icon: GiOlive },
+  { key: 'grenade', name: 'Pomegranate', icon: GiFruitBowl },
+  { key: 'pivoine', name: 'Peony', icon: GiFlowerPot },
+  { key: 'vigneRouge', name: 'Red Vine', icon: GiHerbsBundle },
+  { key: 'echinacee', name: 'Echinacea', icon: GiFlowerPot },
+  { key: 'papaye', name: 'Papaya', icon: GiFruitBowl },
+  { key: 'acmella', name: 'Acmella', icon: GiFlowerPot },
+  { key: 'cristeMarine', name: 'Sea Samphire', icon: GiHerbsBundle },
+  { key: 'jojoba', name: 'Jojoba', icon: GiWaterDrop },
+  { key: 'theVert', name: 'Green Tea', icon: GiCactus },
+  { key: 'varech', name: 'Kelp', icon: GiHerbsBundle },
+  { key: 'murierBlanc', name: 'White Mulberry', icon: GiHerbsBundle },
+  { key: 'cacao', name: 'Cocoa Butter', icon: GiOlive },
+  { key: 'cafeine', name: 'Caffeine', icon: GiHerbsBundle },
+  { key: 'carthame', name: 'Safflower', icon: GiSunflower },
+  { key: 'cireAbeille', name: 'Beeswax', icon: GiHoneyJar },
+  { key: 'coco', name: 'Coconut Oil', icon: GiOlive },
+  { key: 'framboise', name: 'Raspberry', icon: GiFruitBowl },
+  { key: 'glycerine', name: 'Glycerin', icon: GiWaterDrop },
+  { key: 'citrouille', name: 'Pumpkin Seeds', icon: GiFruitBowl },
+  { key: 'amande', name: 'Almond Oil', icon: GiOlive },
+  { key: 'framboiseSeed', name: 'Raspberry Seed', icon: GiFruitBowl },
+  { key: 'noix', name: 'Walnut Oil', icon: GiOlive },
+  { key: 'saccharide', name: 'Saccharide', icon: GiWaterDrop },
+  { key: 'macadamia', name: 'Macadamia', icon: GiOlive },
+  { key: 'mauve', name: 'Mallow', icon: GiFlowerPot },
 ]
 
 export default function IngredientsSection() {
-  const { t, translations } = useTranslation()
+  const { t } = useTranslation()
 
-  const ingredients = ingredientKeys.map((key) => {
-    const ingredient = translations.ingredients?.[key as keyof typeof translations.ingredients] || {}
-    return {
-      key,
-      icon: ingredientIcons[key] || GiFlowerPot,
-      name: ingredient.name || '',
-      description: ingredient.description || '',
-    }
-  })
+  // Créer 3 rows avec 10 ingrédients chacun (doublés pour l'animation infinie)
+  const row1 = [...allIngredients.slice(0, 10), ...allIngredients.slice(0, 10)]
+  const row2 = [...allIngredients.slice(10, 20), ...allIngredients.slice(10, 20)]
+  const row3 = [...allIngredients.slice(20, 30), ...allIngredients.slice(20, 30)]
 
   return (
     <section className="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
@@ -117,10 +143,10 @@ export default function IngredientsSection() {
           </motion.p>
         </motion.div>
 
-        {/* Ingredients - 3 rows, section tilted, full width, overflow allowed */}
+        {/* Ingredients - 3 rows avec défilement animé */}
         <div className="w-full overflow-hidden py-8">
           <motion.div
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-6"
             style={{
               transform: 'rotate(-2deg)',
             }}
@@ -129,148 +155,112 @@ export default function IngredientsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            {/* Row 1 */}
-            <div className="flex flex-nowrap items-center">
-              {ingredients.slice(0, 5).map((ingredient, index) => (
-                <motion.div
-                  key={ingredient.key}
-                  className="group relative p-6 lg:p-8 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0"
-                  style={{ 
-                    width: `calc(100vw / 5)`,
-                    minWidth: '200px'
-                  }}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.05 }}
-                  whileHover={{ y: -5, scale: 1.08, transition: { duration: 0.2, ease: 'easeOut' } }}
-                >
-                  {/* Icon */}
-                  <motion.div
-                    className="mb-4"
-                    animate={{
-                      y: [0, -5, 0],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                      delay: index * 0.2,
+            {/* Row 1 - Défile vers la gauche */}
+            <div className="relative overflow-hidden">
+              <div 
+                className="flex flex-nowrap items-center"
+                style={{
+                  animation: 'scroll-left 80s linear infinite',
+                }}
+              >
+                {row1.map((ingredient, index) => (
+                  <div
+                    key={`${ingredient.key}-${index}`}
+                    className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2"
+                    style={{ 
+                      width: '200px',
+                      minWidth: '200px'
                     }}
                   >
-                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-gold-100 to-gold-200 rounded-full flex items-center justify-center group-hover:from-gold-200 group-hover:to-gold-300 transition-colors">
-                      <ingredient.icon className="w-6 h-6 lg:w-8 lg:h-8 text-gold-600" />
+                    {/* Icon */}
+                    <div className="mb-3">
+                      <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-gold-100 to-gold-200 rounded-full flex items-center justify-center group-hover:from-gold-200 group-hover:to-gold-300 transition-colors">
+                        <ingredient.icon className="w-6 h-6 lg:w-7 lg:h-7 text-gold-600" />
+                      </div>
                     </div>
-                  </motion.div>
 
-                  {/* Content */}
-                  <h3 className="text-base lg:text-lg font-serif font-bold text-gray-900 mb-2">
-                    {ingredient.name}
-                  </h3>
-                  <p className="text-gray-600 text-xs lg:text-sm leading-relaxed">
-                    {ingredient.description}
-                  </p>
+                    {/* Content */}
+                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900">
+                      {ingredient.name}
+                    </h3>
 
-                  {/* Decorative Element */}
-                  <div className="absolute top-2 right-2 w-12 h-12 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
-                </motion.div>
-              ))}
+                    {/* Decorative Element */}
+                    <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Row 2 - décalée, peut déborder des deux côtés */}
-            <div className="flex flex-nowrap items-center" style={{ marginLeft: '-10%', width: '120%' }}>
-              {ingredients.slice(6, 12).map((ingredient, index) => (
-                <motion.div
-                  key={ingredient.key}
-                  className="group relative p-6 lg:p-8 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0"
-                  style={{ 
-                    width: `calc(100vw / 5)`,
-                    minWidth: '200px'
-                  }}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: (index + 6) * 0.05 }}
-                  whileHover={{ opacity: 1, y: -5, scale: 1.08, transition: { duration: 0.2, ease: 'easeOut' } }}
-                >
-                  {/* Icon */}
-                  <motion.div
-                    className="mb-4"
-                    animate={{
-                      y: [0, -5, 0],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                      delay: (index + 6) * 0.2,
+            {/* Row 2 - Défile vers la droite */}
+            <div className="relative overflow-hidden">
+              <div 
+                className="flex flex-nowrap items-center"
+                style={{
+                  animation: 'scroll-right 80s linear infinite',
+                }}
+              >
+                {row2.map((ingredient, index) => (
+                  <div
+                    key={`${ingredient.key}-${index}`}
+                    className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2"
+                    style={{ 
+                      width: '200px',
+                      minWidth: '200px'
                     }}
                   >
-                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-gold-100 to-gold-200 rounded-full flex items-center justify-center group-hover:from-gold-200 group-hover:to-gold-300 transition-colors">
-                      <ingredient.icon className="w-6 h-6 lg:w-8 lg:h-8 text-gold-600" />
+                    {/* Icon */}
+                    <div className="mb-3">
+                      <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-gold-100 to-gold-200 rounded-full flex items-center justify-center group-hover:from-gold-200 group-hover:to-gold-300 transition-colors">
+                        <ingredient.icon className="w-6 h-6 lg:w-7 lg:h-7 text-gold-600" />
+                      </div>
                     </div>
-                  </motion.div>
 
-                  {/* Content */}
-                  <h3 className="text-base lg:text-lg font-serif font-bold text-gray-900 mb-2">
-                    {ingredient.name}
-                  </h3>
-                  <p className="text-gray-600 text-xs lg:text-sm leading-relaxed">
-                    {ingredient.description}
-                  </p>
+                    {/* Content */}
+                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900">
+                      {ingredient.name}
+                    </h3>
 
-                  {/* Decorative Element */}
-                  <div className="absolute top-2 right-2 w-12 h-12 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
-                </motion.div>
-              ))}
+                    {/* Decorative Element */}
+                    <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Row 3 */}
-            <div className="flex flex-nowrap items-center">
-              {ingredients.slice(13, 18).map((ingredient, index) => (
-                <motion.div
-                  key={ingredient.key}
-                  className="group relative p-6 lg:p-8 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0"
-                  style={{ 
-                    width: `calc(100vw / 5)`,
-                    minWidth: '200px'
-                  }}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: (index + 13) * 0.05 }}
-                  whileHover={{ opacity: 1, y: -5, scale: 1.08, transition: { duration: 0.2, ease: 'easeOut' } }}
-                >
-                  {/* Icon */}
-                  <motion.div
-                    className="mb-4"
-                    animate={{
-                      y: [0, -5, 0],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                      delay: (index + 13) * 0.2,
+            {/* Row 3 - Défile vers la gauche */}
+            <div className="relative overflow-hidden">
+              <div 
+                className="flex flex-nowrap items-center"
+                style={{
+                  animation: 'scroll-left 80s linear infinite',
+                }}
+              >
+                {row3.map((ingredient, index) => (
+                  <div
+                    key={`${ingredient.key}-${index}`}
+                    className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2"
+                    style={{ 
+                      width: '200px',
+                      minWidth: '200px'
                     }}
                   >
-                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-gold-100 to-gold-200 rounded-full flex items-center justify-center group-hover:from-gold-200 group-hover:to-gold-300 transition-colors">
-                      <ingredient.icon className="w-6 h-6 lg:w-8 lg:h-8 text-gold-600" />
+                    {/* Icon */}
+                    <div className="mb-3">
+                      <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-gold-100 to-gold-200 rounded-full flex items-center justify-center group-hover:from-gold-200 group-hover:to-gold-300 transition-colors">
+                        <ingredient.icon className="w-6 h-6 lg:w-7 lg:h-7 text-gold-600" />
+                      </div>
                     </div>
-                  </motion.div>
 
-                  {/* Content */}
-                  <h3 className="text-base lg:text-lg font-serif font-bold text-gray-900 mb-2">
-                    {ingredient.name}
-                  </h3>
-                  <p className="text-gray-600 text-xs lg:text-sm leading-relaxed">
-                    {ingredient.description}
-                  </p>
+                    {/* Content */}
+                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900">
+                      {ingredient.name}
+                    </h3>
 
-                  {/* Decorative Element */}
-                  <div className="absolute top-2 right-2 w-12 h-12 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
-                </motion.div>
-              ))}
+                    {/* Decorative Element */}
+                    <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
