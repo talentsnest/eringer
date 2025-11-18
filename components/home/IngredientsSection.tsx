@@ -90,12 +90,18 @@ export default function IngredientsSection() {
   // Mapper les ingrédients avec leurs traductions
   const ingredientsWithTranslations = allIngredients.map((ingredient) => {
     const translation = translations.ingredients?.[ingredient.key as keyof typeof translations.ingredients]
+    const description = translation?.description || ''
     return {
       ...ingredient,
       name: translation?.name || ingredient.name,
-      description: translation?.description || '',
+      description: description,
     }
   })
+
+  // Debug: vérifier que les descriptions sont bien récupérées
+  if (typeof window !== 'undefined' && ingredientsWithTranslations.length > 0) {
+    console.log('First ingredient:', ingredientsWithTranslations[0])
+  }
 
   // Créer 3 rows avec 10 ingrédients chacun (doublés pour l'animation infinie)
   const row1 = [...ingredientsWithTranslations.slice(0, 10), ...ingredientsWithTranslations.slice(0, 10)]
@@ -176,10 +182,11 @@ export default function IngredientsSection() {
                 {row1.map((ingredient, index) => (
                   <div
                     key={`${ingredient.key}-${index}`}
-                    className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2"
+                    className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2 flex flex-col"
                     style={{ 
                       width: '200px',
-                      minWidth: '200px'
+                      minWidth: '200px',
+                      minHeight: '140px'
                     }}
                   >
                     {/* Icon */}
@@ -193,8 +200,8 @@ export default function IngredientsSection() {
                     <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
                       {ingredient.name}
                     </h3>
-                    {ingredient.description && (
-                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight">
+                    {ingredient.description && ingredient.description.trim() !== '' && (
+                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1">
                         {ingredient.description}
                       </p>
                     )}
@@ -217,10 +224,11 @@ export default function IngredientsSection() {
                 {row2.map((ingredient, index) => (
                   <div
                     key={`${ingredient.key}-${index}`}
-                    className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2"
+                    className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2 flex flex-col"
                     style={{ 
                       width: '200px',
-                      minWidth: '200px'
+                      minWidth: '200px',
+                      minHeight: '140px'
                     }}
                   >
                     {/* Icon */}
@@ -234,8 +242,8 @@ export default function IngredientsSection() {
                     <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
                       {ingredient.name}
                     </h3>
-                    {ingredient.description && (
-                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight">
+                    {ingredient.description && ingredient.description.trim() !== '' && (
+                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1">
                         {ingredient.description}
                       </p>
                     )}
@@ -258,10 +266,11 @@ export default function IngredientsSection() {
                 {row3.map((ingredient, index) => (
                   <div
                     key={`${ingredient.key}-${index}`}
-                    className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2"
+                    className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2 flex flex-col"
                     style={{ 
                       width: '200px',
-                      minWidth: '200px'
+                      minWidth: '200px',
+                      minHeight: '140px'
                     }}
                   >
                     {/* Icon */}
@@ -275,8 +284,8 @@ export default function IngredientsSection() {
                     <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
                       {ingredient.name}
                     </h3>
-                    {ingredient.description && (
-                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight">
+                    {ingredient.description && ingredient.description.trim() !== '' && (
+                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1">
                         {ingredient.description}
                       </p>
                     )}
