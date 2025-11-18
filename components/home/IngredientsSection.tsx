@@ -185,19 +185,19 @@ export default function IngredientsSection() {
                     style={{ 
                       width: '240px',
                       minWidth: '240px',
-                      height: '180px'
+                      minHeight: '180px'
                     }}
                   >
                     {/* Icon */}
-                    <div className="mb-3">
+                    <div className="mb-3 flex-shrink-0">
                       <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-gold-100 to-gold-200 rounded-full flex items-center justify-center group-hover:from-gold-200 group-hover:to-gold-300 transition-colors">
                         <ingredient.icon className="w-6 h-6 lg:w-7 lg:h-7 text-gold-600" />
                       </div>
                     </div>
 
                     {/* Content */}
-                    <div className="flex-1 flex flex-col">
-                      <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
+                    <div className="flex-1 flex flex-col min-h-0">
+                      <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1 flex-shrink-0">
                         {ingredient.name}
                       </h3>
                       {ingredient.description && ingredient.description.trim() !== '' ? (
@@ -229,19 +229,19 @@ export default function IngredientsSection() {
                     style={{ 
                       width: '240px',
                       minWidth: '240px',
-                      height: '180px'
+                      minHeight: '180px'
                     }}
                   >
                     {/* Icon */}
-                    <div className="mb-3">
+                    <div className="mb-3 flex-shrink-0">
                       <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-gold-100 to-gold-200 rounded-full flex items-center justify-center group-hover:from-gold-200 group-hover:to-gold-300 transition-colors">
                         <ingredient.icon className="w-6 h-6 lg:w-7 lg:h-7 text-gold-600" />
                       </div>
                     </div>
 
                     {/* Content */}
-                    <div className="flex-1 flex flex-col">
-                      <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
+                    <div className="flex-1 flex flex-col min-h-0">
+                      <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1 flex-shrink-0">
                         {ingredient.name}
                       </h3>
                       {ingredient.description && ingredient.description.trim() !== '' ? (
