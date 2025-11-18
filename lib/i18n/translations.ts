@@ -80,7 +80,7 @@ export const translations = {
       'serum-anti-cernes': {
         name: 'Sérum Anti-Cernes et Anti-Poches',
         description: 'Sérum contour des yeux anti-cernes et anti-poches',
-        tags: ['Soin des yeux', 'Avocat', 'Grenade', 'Prêle'],
+        tags: ['Soin des yeux', 'Avocat', 'Grenade', 'Vigne Rouge'],
       },
       'serum-perles': {
         name: 'Sérum Perles Anti-Pollution',
@@ -158,9 +158,9 @@ export const translations = {
         name: 'Extrait de Fleur de Pivoine',
         description: 'Apaisante et anti-inflammatoire, idéale pour les peaux sensibles et réactives',
       },
-      prele: {
-        name: 'Extrait de Prêle des Champs',
-        description: 'Riche en silice pour renforcer la structure de la peau et améliorer l\'élasticité',
+      vigneRouge: {
+        name: 'Vigne Rouge',
+        description: 'Améliore la microcirculation et réduit les poches et cernes pour un regard plus lumineux',
       },
       echinacee: {
         name: 'Échinacée',
@@ -355,7 +355,7 @@ export const translations = {
       'serum-anti-cernes': {
         name: 'Anti-Dark Circles & Puffiness Serum',
         description: 'Eye contour serum for dark circles and puffiness',
-        tags: ['Eye care', 'Avocado', 'Pomegranate', 'Horsetail'],
+        tags: ['Eye care', 'Avocado', 'Pomegranate', 'Red Vine'],
       },
       'serum-perles': {
         name: 'Pearl Anti-Pollution Serum',
@@ -433,9 +433,9 @@ export const translations = {
         name: 'Peony Flower Extract',
         description: 'Soothing and anti-inflammatory, ideal for sensitive and reactive skin',
       },
-      prele: {
-        name: 'Field Horsetail Extract',
-        description: 'Rich in silica to strengthen skin structure and improve elasticity',
+      vigneRouge: {
+        name: 'Red Vine',
+        description: 'Improves microcirculation and reduces puffiness and dark circles for a brighter look',
       },
       echinacee: {
         name: 'Echinacea',
