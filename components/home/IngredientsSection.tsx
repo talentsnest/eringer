@@ -185,7 +185,7 @@ export default function IngredientsSection() {
                     style={{ 
                       width: '240px',
                       minWidth: '240px',
-                      minHeight: '168px'
+                      height: '180px'
                     }}
                   >
                     {/* Icon */}
@@ -201,7 +201,7 @@ export default function IngredientsSection() {
                         {ingredient.name}
                       </h3>
                       {ingredient.description && ingredient.description.trim() !== '' ? (
-                        <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1 flex-1">
+                        <p className="text-sm text-gray-600 leading-relaxed mt-1 flex-1 overflow-y-auto">
                           {ingredient.description}
                         </p>
                       ) : null}
@@ -229,7 +229,7 @@ export default function IngredientsSection() {
                     style={{ 
                       width: '240px',
                       minWidth: '240px',
-                      minHeight: '168px'
+                      height: '180px'
                     }}
                   >
                     {/* Icon */}
@@ -245,7 +245,7 @@ export default function IngredientsSection() {
                         {ingredient.name}
                       </h3>
                       {ingredient.description && ingredient.description.trim() !== '' ? (
-                        <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1 flex-1">
+                        <p className="text-sm text-gray-600 leading-relaxed mt-1 flex-1 overflow-y-auto">
                           {ingredient.description}
                         </p>
                       ) : null}
