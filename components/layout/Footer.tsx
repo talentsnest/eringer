@@ -20,9 +20,9 @@ const getFooterLinks = (t: (key: string) => string) => ({
 const getBaseUrl = (locale: string) => {
   // Pour la version anglaise, ne pas inclure /en/ dans les URLs externes
   if (locale === 'en') {
-    return 'https://eringerswitzerland.com'
+    return 'https://eringerswitzerland.ch'
   }
-  return `https://eringerswitzerland.com/${locale}`
+  return `https://eringerswitzerland.ch/${locale}`
 }
 
 const scrollToSection = (sectionId: string) => {
@@ -37,7 +37,7 @@ const socialLinks = [
   { icon: SiFacebook, href: 'https://facebook.com/eringer.switzerland', label: 'Facebook' },
   { icon: SiLinkedin, href: 'https://linkedin.com/company/eringerswitzerland', label: 'LinkedIn' },
   { icon: SiTiktok, href: 'https://tiktok.com/@eringer.switzerland', label: 'TikTok' },
-  { icon: FiMail, href: 'mailto:contact@eringerswitzerland.com', label: 'Email' },
+  { icon: FiMail, href: 'mailto:contact@eringerswitzerland.ch', label: 'Email' },
 ]
 
 export default function Footer() {

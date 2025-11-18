@@ -8,9 +8,9 @@ import { useTranslation } from '@/lib/i18n/useTranslation'
 const getBaseUrl = (locale: string) => {
   // Pour la version anglaise, ne pas inclure /en/ dans les URLs externes
   if (locale === 'en') {
-    return 'https://eringerswitzerland.com'
+    return 'https://eringerswitzerland.ch'
   }
-  return `https://eringerswitzerland.com/${locale}`
+  return `https://eringerswitzerland.ch/${locale}`
 }
 
 const iconMap: Record<string, any> = {

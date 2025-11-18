@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { FiShoppingCart } from 'react-icons/fi'
 import { handleTrackedClick } from '@/lib/analytics'
 
-const baseUrl = 'https://eringerswitzerland.com/fr'
+const baseUrl = 'https://eringerswitzerland.ch/fr'
 
 interface ProductCardProps {
   id: string

@@ -55,7 +55,7 @@ const faqCategories = [
       },
       {
         q: 'How do I initiate a return?',
-        a: 'Contact our customer service team at contact@eringerswitzerland.com with your order number. We\'ll provide you with return instructions and a prepaid shipping label.',
+        a: 'Contact our customer service team at contact@eringerswitzerland.ch with your order number. We\'ll provide you with return instructions and a prepaid shipping label.',
       },
       {
         q: 'When will I receive my refund?',

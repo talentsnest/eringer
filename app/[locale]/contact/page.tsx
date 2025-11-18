@@ -18,7 +18,7 @@ const contactInfo = [
   {
     icon: FiMail,
     title: 'Email Us',
-    details: ['contact@eringerswitzerland.com', 'support@eringerswitzerland.com'],
+    details: ['contact@eringerswitzerland.ch', 'support@eringerswitzerland.ch'],
   },
 ]
 
