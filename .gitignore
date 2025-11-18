@@ -50,9 +50,12 @@ public/videos/backup_*/
 public/videos/*_backup.*
 public/videos/*_backup.mp4
 public/videos/*_backup.webm
-# All video files (too large for git)
+# All video files (too large for git) - except essential ones
 public/videos/*.mp4
 public/videos/*.webm
+# Exception: keep essential videos for hero and loader
+!public/videos/loader.mp4
+!public/videos/hero2.mp4
 
 # Unnecessary files
 *.docx
