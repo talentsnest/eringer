@@ -20,9 +20,9 @@ const getFooterLinks = (t: (key: string) => string) => ({
 const getBaseUrl = (locale: string) => {
   // Pour la version anglaise, ne pas inclure /en/ dans les URLs externes
   if (locale === 'en') {
-    return 'https://eringerswitzerland.ch'
+    return 'https://shop.eringerswitzerland.ch'
   }
-  return `https://eringerswitzerland.ch/${locale}`
+  return `https://shop.eringerswitzerland.ch/${locale}`
 }
 
 const scrollToSection = (sectionId: string) => {

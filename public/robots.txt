@@ -2,5 +2,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eringerswitzerland.ch/sitemap.xml
+Sitemap: https://shop.eringerswitzerland.ch/sitemap.xml
 
