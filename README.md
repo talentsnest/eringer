@@ -19,6 +19,7 @@ A luxury e-commerce website built with Next.js 14, React, TailwindCSS, and Frame
 - **TailwindCSS**: Utility-first styling with custom design tokens
 - **Image Optimization**: WebP format support and lazy loading
 - **SEO Optimized**: Meta tags, structured data, and semantic HTML
+- **Internationalization (i18n)**: Full French/English support with locale routing
 
 ### Pages
 - **Home**: Hero section, best sellers, ingredients showcase, testimonials, blog preview
@@ -81,14 +82,15 @@ npm start
 ```
 erdinger/
 ├── app/                      # Next.js App Router pages
-│   ├── about/               # About page
-│   ├── blog/                # Blog listing
-│   ├── contact/             # Contact form
-│   ├── faq/                 # FAQ page
-│   ├── shop/                # Product catalog
+│   ├── [locale]/            # Internationalized routes (fr/en)
+│   │   ├── about/           # About page
+│   │   ├── blog/            # Blog listing
+│   │   ├── contact/         # Contact form
+│   │   ├── faq/             # FAQ page
+│   │   ├── shop/            # Product catalog
+│   │   └── page.tsx         # Home page
 │   ├── globals.css          # Global styles
-│   ├── layout.tsx           # Root layout with header/footer
-│   └── page.tsx             # Home page
+│   └── layout.tsx           # Root layout
 ├── components/
 │   ├── home/                # Home page sections
 │   │   ├── HeroSection.tsx
@@ -105,6 +107,10 @@ erdinger/
 │       ├── CustomCursor.tsx
 │       ├── ScrollProgress.tsx
 │       └── PageTransition.tsx
+├── lib/
+│   └── i18n/               # Internationalization
+│       ├── translations.ts
+│       └── useTranslation.ts
 ├── public/                  # Static assets
 ├── tailwind.config.js       # TailwindCSS configuration
 ├── tsconfig.json           # TypeScript configuration
@@ -133,7 +139,7 @@ Smooth fade transitions between page navigations.
 ## 🔧 Customization
 
 ### Adding Products
-Edit the product arrays in `/app/shop/page.tsx` and `/components/home/BestSellers.tsx`.
+Edit the product arrays in `/app/[locale]/shop/page.tsx` and `/components/home/BestSellers.tsx`.
 
 ### Changing Colors
 Modify the color palette in `tailwind.config.js`:
@@ -145,7 +151,7 @@ colors: {
 ```
 
 ### Adding Blog Posts
-Add new blog post objects to the arrays in `/app/blog/page.tsx` and `/components/home/BlogSection.tsx`.
+Add new blog post objects to the arrays in `/app/[locale]/blog/page.tsx` and `/components/home/BlogSection.tsx`.
 
 ## 📱 Responsive Breakpoints
 - **Mobile**: < 768px
@@ -167,4 +173,3 @@ For questions or support, contact: contact@eringerswitzerland.com
 ---
 
 Built with ❤️ using Next.js, React, TailwindCSS, and Framer Motion
-
