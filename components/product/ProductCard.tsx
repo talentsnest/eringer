@@ -151,8 +151,7 @@ const ProductCard = memo(function ProductCard({
             videoRef.current.pause()
             videoRef.current.currentTime = 0
           }
-          // Réinitialiser l'état vidéo pour le prochain hover
-          setIsVideoReady(false)
+          // Ne pas réinitialiser isVideoReady - la vidéo reste préchargée
           setIsVideoLoading(false)
         }
       }}
