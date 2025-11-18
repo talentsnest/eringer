@@ -9,12 +9,30 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
       - name: Trigger Vercel Deployment
         run: |
-          if [ -n "${{ secrets.VERCEL_DEPLOY_HOOK }}" ]; then
-            curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
-            echo "Deployment triggered successfully"
+          if [ -z "${{ secrets.VERCEL_DEPLOY_HOOK }}" ]; then
+            echo "❌ Error: VERCEL_DEPLOY_HOOK secret is not set"
+            echo "Please create a Deploy Hook in Vercel and add it as a secret in GitHub"
+            exit 1
+          fi
+          
+          echo "🚀 Triggering Vercel deployment..."
+          echo "Hook URL: ${{ secrets.VERCEL_DEPLOY_HOOK }}"
+          
+          response=$(curl -s -w "\n%{http_code}" -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}")
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+          
+          if [ "$http_code" -eq 200 ] || [ "$http_code" -eq 201 ]; then
+            echo "✅ Deployment triggered successfully!"
+            echo "Response: $body"
           else
-            echo "VERCEL_DEPLOY_HOOK secret not set. Please create a Deploy Hook in Vercel and add it as a secret."
+            echo "❌ Failed to trigger deployment. HTTP code: $http_code"
+            echo "Response: $body"
+            exit 1
           fi
 
