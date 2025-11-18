@@ -103,10 +103,9 @@ export default function IngredientsSection() {
     console.log('First ingredient:', ingredientsWithTranslations[0])
   }
 
-  // Créer 3 rows avec 10 ingrédients chacun (doublés pour l'animation infinie)
-  const row1 = [...ingredientsWithTranslations.slice(0, 10), ...ingredientsWithTranslations.slice(0, 10)]
-  const row2 = [...ingredientsWithTranslations.slice(10, 20), ...ingredientsWithTranslations.slice(10, 20)]
-  const row3 = [...ingredientsWithTranslations.slice(20, 30), ...ingredientsWithTranslations.slice(20, 30)]
+  // Créer 2 rows avec 15 ingrédients chacun (doublés pour l'animation infinie)
+  const row1 = [...ingredientsWithTranslations.slice(0, 15), ...ingredientsWithTranslations.slice(0, 15)]
+  const row2 = [...ingredientsWithTranslations.slice(15, 30), ...ingredientsWithTranslations.slice(15, 30)]
 
   return (
     <section className="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
@@ -184,9 +183,9 @@ export default function IngredientsSection() {
                     key={`${ingredient.key}-${index}`}
                     className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2 flex flex-col"
                     style={{ 
-                      width: '200px',
-                      minWidth: '200px',
-                      minHeight: '140px'
+                      width: '240px',
+                      minWidth: '240px',
+                      minHeight: '168px'
                     }}
                   >
                     {/* Icon */}
@@ -228,53 +227,9 @@ export default function IngredientsSection() {
                     key={`${ingredient.key}-${index}`}
                     className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2 flex flex-col"
                     style={{ 
-                      width: '200px',
-                      minWidth: '200px',
-                      minHeight: '140px'
-                    }}
-                  >
-                    {/* Icon */}
-                    <div className="mb-3">
-                      <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-gold-100 to-gold-200 rounded-full flex items-center justify-center group-hover:from-gold-200 group-hover:to-gold-300 transition-colors">
-                        <ingredient.icon className="w-6 h-6 lg:w-7 lg:h-7 text-gold-600" />
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1 flex flex-col">
-                      <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
-                        {ingredient.name}
-                      </h3>
-                      {ingredient.description && ingredient.description.trim() !== '' ? (
-                        <p className="text-xs text-gray-600 line-clamp-2 leading-tight mt-1 flex-1">
-                          {ingredient.description}
-                        </p>
-                      ) : null}
-                    </div>
-
-                    {/* Decorative Element */}
-                    <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Row 3 - Défile vers la gauche */}
-            <div className="relative overflow-hidden">
-              <div 
-                className="flex flex-nowrap items-center"
-                style={{
-                  animation: 'scroll-left 80s linear infinite',
-                }}
-              >
-                {row3.map((ingredient, index) => (
-                  <div
-                    key={`${ingredient.key}-${index}`}
-                    className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2 flex flex-col"
-                    style={{ 
-                      width: '200px',
-                      minWidth: '200px',
-                      minHeight: '140px'
+                      width: '240px',
+                      minWidth: '240px',
+                      minHeight: '168px'
                     }}
                   >
                     {/* Icon */}
