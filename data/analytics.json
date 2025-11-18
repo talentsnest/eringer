@@ -1,0 +1,46 @@
+{
+  "clicks": [
+    {
+      "url": "https://eringerswitzerland.com/fr/products/lotion-nourrissante-corps",
+      "label": "Lotion Corporelle Douceur et Régénération",
+      "type": "product",
+      "timestamp": "2025-11-13T15:15:18.225Z"
+    },
+    {
+      "url": "https://eringerswitzerland.com/en/products/creme-visage-eclat-peaux-mixtes",
+      "label": "Radiance Cream Balance & Light",
+      "type": "product",
+      "timestamp": "2025-11-18T14:20:38.295Z"
+    },
+    {
+      "url": "https://eringerswitzerland.com/en/products/serum-ultra-hydatrant",
+      "label": "Ultra Hydrating Serum",
+      "type": "product",
+      "timestamp": "2025-11-18T14:20:44.679Z"
+    },
+    {
+      "url": "https://eringerswitzerland.com/fr/products/serum-ultra-hydatrant",
+      "label": "Sérum Ultra Hydratant",
+      "type": "product",
+      "timestamp": "2025-11-18T14:20:52.181Z"
+    },
+    {
+      "url": "https://eringerswitzerland.com/fr/products/masque-hydratant-72h",
+      "label": "Masque Hydratant & Apaisant 72H",
+      "type": "product",
+      "timestamp": "2025-11-18T14:21:43.628Z"
+    },
+    {
+      "url": "https://eringerswitzerland.com/en/products/serum-ultra-hydatrant",
+      "label": "Ultra Hydrating Serum",
+      "type": "product",
+      "timestamp": "2025-11-18T14:22:18.834Z"
+    },
+    {
+      "url": "https://eringerswitzerland.com/products/serum-perles-actives-anti-pollution",
+      "label": "Pearl Anti-Pollution Serum",
+      "type": "product",
+      "timestamp": "2025-11-18T14:25:13.045Z"
+    }
+  ]
+}
