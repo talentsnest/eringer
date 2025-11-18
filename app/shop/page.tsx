@@ -90,7 +90,7 @@ const products = [
     price: 69,
     image: '/images/serum-anti-cernes.png',
     category: 'Serums',
-    tags: ['Eye care', 'Avocado', 'Pomegranate', 'Horsetail'],
+        tags: ['Eye care', 'Avocado', 'Pomegranate', 'Red Vine'],
   },
   {
     id: '12',
