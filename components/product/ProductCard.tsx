@@ -35,6 +35,8 @@ const ProductCard = memo(function ProductCard({
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isMobile, setIsMobile] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const [isVideoReady, setIsVideoReady] = useState(false)
+  const [isVideoLoading, setIsVideoLoading] = useState(false)
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const cardRef = useRef<HTMLDivElement | null>(null)
 
@@ -61,6 +63,33 @@ const ProductCard = memo(function ProductCard({
     rootMargin: '0px',
   }), [])
 
+  // Précharger la vidéo quand la carte est proche du viewport (desktop)
+  useEffect(() => {
+    if (!hoverVideo || isMobile || !cardRef.current) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && videoRef.current && !isVideoReady) {
+            // Précharger la vidéo quand la carte est visible
+            setIsVideoLoading(true)
+            videoRef.current.load()
+          }
+        })
+      },
+      { threshold: 0.1, rootMargin: '200px' } // Précharger 200px avant d'entrer dans le viewport
+    )
+
+    const currentCard = cardRef.current
+    observer.observe(currentCard)
+
+    return () => {
+      if (currentCard) {
+        observer.unobserve(currentCard)
+      }
+    }
+  }, [hoverVideo, isMobile, isVideoReady])
+
   // Intersection Observer pour détecter la visibilité sur mobile
   useEffect(() => {
     if (!hoverVideo || !isMobile || !cardRef.current) return
@@ -71,7 +100,7 @@ const ProductCard = memo(function ProductCard({
           if (entry.isIntersecting) {
             setIsVisible(true)
             if (videoRef.current) {
-              // Charger la vidéo seulement quand visible
+              setIsVideoLoading(true)
               videoRef.current.load()
               videoRef.current.currentTime = 0
               videoRef.current.play().catch(() => {})
@@ -104,12 +133,14 @@ const ProductCard = memo(function ProductCard({
       className="group relative cursor-hover"
       onMouseEnter={() => {
         if (!isMobile) {
-        setIsHovered(true)
-        if (hoverVideo && videoRef.current) {
-          // Charger la vidéo seulement au hover
-          videoRef.current.load()
-          videoRef.current.currentTime = 0
-          videoRef.current.play().catch(() => {})
+          setIsHovered(true)
+          if (hoverVideo && videoRef.current) {
+            if (!isVideoReady) {
+              setIsVideoLoading(true)
+              videoRef.current.load()
+            }
+            videoRef.current.currentTime = 0
+            videoRef.current.play().catch(() => {})
           }
         }
       }}
@@ -157,30 +188,42 @@ const ProductCard = memo(function ProductCard({
             }}
             transition={{ type: 'spring', damping: 25, stiffness: 400 }}
           >
-            {/* Base image */}
+            {/* Base image - reste visible jusqu'à ce que la vidéo soit prête */}
             <Image
               src={image}
               alt={name}
               fill
               className={`object-cover transition-opacity duration-200 ${
-                hoverVideo && (isMobile ? isVisible : isHovered) ? 'opacity-0' : 'opacity-100'
+                hoverVideo && (isMobile ? isVisible : isHovered) && isVideoReady ? 'opacity-0' : 'opacity-100'
               }`}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority={false}
             />
 
-            {/* Hover video */}
+            {/* Hover video - s'affiche seulement quand prête */}
             {hoverVideo && (
               <video
                 ref={videoRef}
                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-200 ${
-                  isMobile ? (isVisible ? 'opacity-100' : 'opacity-0') : (isHovered ? 'opacity-100' : 'opacity-0')
+                  (isMobile ? isVisible : isHovered) && isVideoReady ? 'opacity-100' : 'opacity-0'
                 }`}
                 muted
                 playsInline
-                preload="none"
+                preload="metadata"
                 loop
                 aria-label={`${name} preview video`}
+                onLoadedData={() => {
+                  setIsVideoReady(true)
+                  setIsVideoLoading(false)
+                }}
+                onCanPlay={() => {
+                  setIsVideoReady(true)
+                  setIsVideoLoading(false)
+                }}
+                onError={() => {
+                  setIsVideoLoading(false)
+                  // En cas d'erreur, on garde l'image visible
+                }}
               >
                 <source src={hoverVideo} type="video/mp4" />
               </video>
