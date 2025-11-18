@@ -44,3 +44,9 @@ next-env.d.ts
 .DS_Store
 Thumbs.db
 
+# Large video files and backups
+public/videos/backup_*/
+public/videos/*_backup.*
+public/videos/*_backup.mp4
+public/videos/*_backup.webm
+
