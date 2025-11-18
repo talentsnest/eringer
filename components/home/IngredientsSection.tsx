@@ -184,8 +184,7 @@ export default function IngredientsSection() {
                     className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2 flex flex-col"
                     style={{ 
                       width: '240px',
-                      minWidth: '240px',
-                      minHeight: '180px'
+                      minWidth: '240px'
                     }}
                   >
                     {/* Icon */}
@@ -201,7 +200,7 @@ export default function IngredientsSection() {
                         {ingredient.name}
                       </h3>
                       {ingredient.description && ingredient.description.trim() !== '' ? (
-                        <p className="text-sm text-gray-600 leading-relaxed mt-1 flex-1 overflow-y-auto">
+                        <p className="text-sm text-gray-600 leading-relaxed mt-1">
                           {ingredient.description}
                         </p>
                       ) : null}
@@ -228,8 +227,7 @@ export default function IngredientsSection() {
                     className="group relative p-4 lg:p-6 bg-white/60 rounded-xl shadow-lg hover:bg-white hover:opacity-100 hover:shadow-2xl transition-all duration-300 cursor-hover flex-shrink-0 mx-2 flex flex-col"
                     style={{ 
                       width: '240px',
-                      minWidth: '240px',
-                      minHeight: '180px'
+                      minWidth: '240px'
                     }}
                   >
                     {/* Icon */}
@@ -245,7 +243,7 @@ export default function IngredientsSection() {
                         {ingredient.name}
                       </h3>
                       {ingredient.description && ingredient.description.trim() !== '' ? (
-                        <p className="text-sm text-gray-600 leading-relaxed mt-1 flex-1 overflow-y-auto">
+                        <p className="text-sm text-gray-600 leading-relaxed mt-1">
                           {ingredient.description}
                         </p>
                       ) : null}
