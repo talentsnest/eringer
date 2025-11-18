@@ -44,7 +44,7 @@ export default function Header() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-landscape ${
           isScrolled || !isHome
             ? 'bg-black/95 backdrop-blur-md shadow-sm py-4'
             : 'bg-transparent py-6'
@@ -65,7 +65,7 @@ export default function Header() {
                 alt="ERINGER Switzerland"
                 width={300}
                 height={80}
-                className={`h-16 w-auto object-contain ${
+                className={`h-16 w-auto object-contain logo-landscape ${
                   !isScrolled && isHome ? 'brightness-200 invert-0' : ''
                 }`}
               />

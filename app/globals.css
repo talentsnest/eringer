@@ -155,6 +155,31 @@ img {
   /* will-change retiré - appliqué dynamiquement si nécessaire */
 }
 
+/* Mobile landscape specific styles */
+@media (orientation: landscape) and (max-width: 768px) {
+  /* Hero section - 150vh height and 150px padding top */
+  .hero-landscape {
+    height: 150vh !important;
+    padding-top: 150px !important;
+  }
+  
+  /* Header - less padding */
+  .header-landscape {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  /* Logo - 10% smaller */
+  .logo-landscape {
+    transform: scale(0.9);
+  }
+  
+  /* Products grid - 3 columns */
+  .products-grid-landscape {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
 /* Respecter les préférences d'accessibilité */
 @media (prefers-reduced-motion: reduce) {
   *,
