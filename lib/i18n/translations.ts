@@ -135,7 +135,7 @@ export const translations = {
         description: 'Fleur alpine suisse reconnue pour ses puissantes propriétés antioxydantes et anti-âge',
       },
       reishi: {
-        name: 'Reishi (Ganoderma)',
+        name: 'Reishi',
         description: 'Champignon adaptogène qui favorise la résilience de la peau et l\'éclat naturel',
       },
       aloeVera: {
@@ -143,7 +143,7 @@ export const translations = {
         description: 'Hydratant et apaisant en profondeur, parfait pour les peaux sensibles',
       },
       immortelle: {
-        name: 'Immortelle (Fleur d\'Immortelle)',
+        name: 'Immortelle',
         description: 'Fleur dorée aux propriétés régénérantes exceptionnelles et anti-inflammatoires',
       },
       avocat: {
@@ -151,11 +151,11 @@ export const translations = {
         description: 'Riche en acides gras essentiels pour nourrir et protéger la barrière cutanée',
       },
       grenade: {
-        name: 'Extrait de Fleur de Grenade',
+        name: 'Grenade',
         description: 'Antioxydant puissant qui combat les radicaux libres et illumine le teint',
       },
       pivoine: {
-        name: 'Extrait de Fleur de Pivoine',
+        name: 'Pivoine',
         description: 'Apaisante et anti-inflammatoire, idéale pour les peaux sensibles et réactives',
       },
       vigneRouge: {
@@ -167,11 +167,11 @@ export const translations = {
         description: 'Plante purifiante aux propriétés antibactériennes et apaisantes',
       },
       papaye: {
-        name: 'Fruit de Papaye / Papaye',
+        name: 'Papaye',
         description: 'Enzyme naturelle qui exfolie en douceur et révèle un éclat radieux',
       },
       acmella: {
-        name: 'Acmella Oleracea',
+        name: 'Acmella',
         description: 'Plante aux propriétés lissantes et raffermissantes pour un effet liftant',
       },
       cristeMarine: {
@@ -179,15 +179,15 @@ export const translations = {
         description: 'Protecteur contre la pollution et les agressions environnementales',
       },
       jojoba: {
-        name: 'Huile de Jojoba',
+        name: 'Jojoba',
         description: 'Huile légère qui régule le sébum et hydrate sans graisser',
       },
       theVert: {
-        name: 'Extrait de Thé Vert',
+        name: 'Thé Vert',
         description: 'Antioxydant puissant qui protège la peau des radicaux libres',
       },
       varech: {
-        name: 'Extrait de Varech',
+        name: 'Varech',
         description: 'Algue marine riche en minéraux qui purifie et détoxifie la peau',
       },
       murierBlanc: {
@@ -195,7 +195,7 @@ export const translations = {
         description: 'Actif anti-pollution qui renforce la barrière cutanée',
       },
       cacao: {
-        name: 'Beurre de Cacao',
+        name: 'Cacao',
         description: 'Nourrit et protège la peau avec des acides gras essentiels',
       },
       cafeine: {
@@ -211,7 +211,7 @@ export const translations = {
         description: 'Protecteur naturel qui forme une barrière douce',
       },
       coco: {
-        name: 'Huile de Coco',
+        name: 'Coco',
         description: 'Hydratant profond aux propriétés antibactériennes',
       },
       framboise: {
@@ -223,19 +223,19 @@ export const translations = {
         description: 'Humectant qui attire et retient l\'humidité',
       },
       citrouille: {
-        name: 'Graines de Citrouille',
+        name: 'Citrouille',
         description: 'Riche en zinc et acides gras pour nourrir la peau',
       },
       amande: {
-        name: 'Huile d\'Amande',
+        name: 'Amande',
         description: 'Adoucissante et apaisante pour tous types de peaux',
       },
       framboiseSeed: {
-        name: 'Huile de Framboise',
+        name: 'Framboise',
         description: 'Antioxydant et protecteur contre les UV',
       },
       noix: {
-        name: 'Huile de Noix',
+        name: 'Noix',
         description: 'Riche en oméga-3 pour nourrir et réparer',
       },
       saccharide: {
@@ -474,7 +474,7 @@ export const translations = {
         description: 'Swiss Alpine flower renowned for its powerful antioxidant and anti-aging properties',
       },
       reishi: {
-        name: 'Reishi (Ganoderma)',
+        name: 'Reishi',
         description: 'Adaptogenic mushroom that promotes skin resilience and natural radiance',
       },
       aloeVera: {
@@ -482,7 +482,7 @@ export const translations = {
         description: 'Deeply hydrating and soothing, perfect for sensitive skin',
       },
       immortelle: {
-        name: 'Immortelle (Immortelle Flower)',
+        name: 'Immortelle',
         description: 'Golden flower with exceptional regenerative and anti-inflammatory properties',
       },
       avocat: {
@@ -490,11 +490,11 @@ export const translations = {
         description: 'Rich in essential fatty acids to nourish and protect the skin barrier',
       },
       grenade: {
-        name: 'Pomegranate Flower Extract',
+        name: 'Pomegranate',
         description: 'Powerful antioxidant that fights free radicals and illuminates the complexion',
       },
       pivoine: {
-        name: 'Peony Flower Extract',
+        name: 'Peony',
         description: 'Soothing and anti-inflammatory, ideal for sensitive and reactive skin',
       },
       vigneRouge: {
@@ -506,11 +506,11 @@ export const translations = {
         description: 'Purifying plant with antibacterial and soothing properties',
       },
       papaye: {
-        name: 'Papaya Fruit / Papaya',
+        name: 'Papaya',
         description: 'Natural enzyme that gently exfoliates and reveals radiant glow',
       },
       acmella: {
-        name: 'Acmella Oleracea',
+        name: 'Acmella',
         description: 'Plant with smoothing and firming properties for a lifting effect',
       },
       cristeMarine: {
@@ -518,15 +518,15 @@ export const translations = {
         description: 'Protective against pollution and environmental aggressions',
       },
       jojoba: {
-        name: 'Jojoba Oil',
+        name: 'Jojoba',
         description: 'Light oil that regulates sebum and hydrates without greasing',
       },
       theVert: {
-        name: 'Green Tea Extract',
+        name: 'Green Tea',
         description: 'Powerful antioxidant that protects the skin from free radicals',
       },
       varech: {
-        name: 'Kelp Extract',
+        name: 'Kelp',
         description: 'Seaweed rich in minerals that purifies and detoxifies the skin',
       },
       murierBlanc: {
@@ -534,7 +534,7 @@ export const translations = {
         description: 'Anti-pollution active that strengthens the skin barrier',
       },
       cacao: {
-        name: 'Cocoa Butter',
+        name: 'Cocoa',
         description: 'Nourishes and protects skin with essential fatty acids',
       },
       cafeine: {
@@ -550,7 +550,7 @@ export const translations = {
         description: 'Natural protector that forms a gentle barrier',
       },
       coco: {
-        name: 'Coconut Oil',
+        name: 'Coconut',
         description: 'Deep moisturizer with antibacterial properties',
       },
       framboise: {
@@ -562,19 +562,19 @@ export const translations = {
         description: 'Humectant that attracts and retains moisture',
       },
       citrouille: {
-        name: 'Pumpkin Seeds',
+        name: 'Pumpkin',
         description: 'Rich in zinc and fatty acids to nourish skin',
       },
       amande: {
-        name: 'Almond Oil',
+        name: 'Almond',
         description: 'Soothing and softening for all skin types',
       },
       framboiseSeed: {
-        name: 'Raspberry Seed',
+        name: 'Raspberry',
         description: 'Antioxidant and UV protector',
       },
       noix: {
-        name: 'Walnut Oil',
+        name: 'Walnut',
         description: 'Rich in omega-3 to nourish and repair',
       },
       saccharide: {
