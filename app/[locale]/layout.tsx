@@ -14,13 +14,13 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
   
   const metadata = {
     fr: {
-      title: 'ERINGER Switzerland | Soins de Luxe Suisses',
-      description: 'Découvrez l\'éclat intemporel avec ERINGER Switzerland. Soins de luxe suisses enrichis d\'ingrédients alpins naturels comme l\'Edelweiss et le Reishi.',
+      title: 'ERINGER SWITZERLAND | Soins de Luxe Suisses',
+      description: 'Découvrez l\'éclat intemporel avec ERINGER SWITZERLAND. Soins de luxe suisses enrichis d\'ingrédients alpins naturels comme l\'Edelweiss et le Reishi.',
       keywords: 'soins de luxe, cosmétiques suisses, Edelweiss, ingrédients naturels, beauté premium',
     },
     en: {
-      title: 'ERINGER Switzerland | Luxury Swiss Skincare',
-      description: 'Discover timeless radiance with ERINGER Switzerland. Premium Swiss skincare enriched with natural Alpine ingredients like Edelweiss and Reishi.',
+      title: 'ERINGER SWITZERLAND | Luxury Swiss Skincare',
+      description: 'Discover timeless radiance with ERINGER SWITZERLAND. Premium Swiss skincare enriched with natural Alpine ingredients like Edelweiss and Reishi.',
       keywords: 'luxury skincare, Swiss cosmetics, Edelweiss, natural ingredients, premium beauty',
     },
   }
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
     title: meta.title,
     description: meta.description,
     keywords: meta.keywords,
-    authors: [{ name: 'ERINGER Switzerland' }],
+    authors: [{ name: 'ERINGER SWITZERLAND' }],
     openGraph: {
       title: meta.title,
       description: meta.description,

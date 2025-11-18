@@ -302,7 +302,7 @@ export const translations = {
         },
         {
           title: 'Inside ERINGER : La philosophie qui guide la création de chaque formule',
-          excerpt: 'Entre naturalité, efficacité clinique et éthique de formulation, ERINGER Switzerland explique comment chaque produit est conçu pour offrir une expérience sensorielle inégalée, en harmonie avec la peau et la nature.',
+          excerpt: 'Entre naturalité, efficacité clinique et éthique de formulation, ERINGER SWITZERLAND explique comment chaque produit est conçu pour offrir une expérience sensorielle inégalée, en harmonie avec la peau et la nature.',
           category: 'Philosophie',
           date: '10 novembre 2025',
           readTime: '6 min',
@@ -330,7 +330,7 @@ export const translations = {
         },
         {
           title: 'Innovation suisse : Nos engagements pour une cosmétique transparente et responsable',
-          excerpt: 'Une vision claire : formules clean, ingrédients tracés, production maîtrisée, tests rigoureux. ERINGER Switzerland révèle ses engagements durables pour une beauté aussi authentique qu\'efficace.',
+          excerpt: 'Une vision claire : formules clean, ingrédients tracés, production maîtrisée, tests rigoureux. ERINGER SWITZERLAND révèle ses engagements durables pour une beauté aussi authentique qu\'efficace.',
           category: 'Durabilité',
           date: '13 octobre 2025',
           readTime: '7 min',
@@ -641,7 +641,7 @@ export const translations = {
         },
         {
           title: 'Inside ERINGER: The Philosophy Guiding Every Formula Creation',
-          excerpt: 'Between naturality, clinical efficacy, and formulation ethics, ERINGER Switzerland explains how each product is designed to offer an unparalleled sensory experience, in harmony with skin and nature.',
+          excerpt: 'Between naturality, clinical efficacy, and formulation ethics, ERINGER SWITZERLAND explains how each product is designed to offer an unparalleled sensory experience, in harmony with skin and nature.',
           category: 'Philosophy',
           date: 'November 10, 2025',
           readTime: '6 min',
@@ -669,7 +669,7 @@ export const translations = {
         },
         {
           title: 'Swiss Innovation: Our Commitments to Transparent and Responsible Cosmetics',
-          excerpt: 'A clear vision: clean formulas, traced ingredients, controlled production, rigorous testing. ERINGER Switzerland reveals its sustainable commitments for beauty that is as authentic as it is effective.',
+          excerpt: 'A clear vision: clean formulas, traced ingredients, controlled production, rigorous testing. ERINGER SWITZERLAND reveals its sustainable commitments for beauty that is as authentic as it is effective.',
           category: 'Sustainability',
           date: 'October 13, 2025',
           readTime: '7 min',

@@ -19,7 +19,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'ERINGER Switzerland',
+  title: 'ERINGER SWITZERLAND',
   description: 'Luxury Swiss Skincare',
 }
 

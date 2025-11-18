@@ -110,7 +110,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
           <div className="mb-4 md:mb-0 text-center md:text-left">
             <p className="mb-2">
-              © {new Date().getFullYear()} ERINGER Switzerland. {t('footer.copyright')}.
+              © {new Date().getFullYear()} ERINGER SWITZERLAND. {t('footer.copyright')}.
             </p>
             <a
               href="https://talentsnest.com"

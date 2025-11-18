@@ -36,7 +36,7 @@ const getBlogPostById = (id: string) => {
         <p><strong>Collagen Preservation:</strong> Studies show that Edelweiss extract helps preserve collagen production, maintaining skin firmness and elasticity.</p>
 
         <h2>Sustainable Harvesting</h2>
-        <p>At ERINGER Switzerland, we're committed to sustainable sourcing. Wild Edelweiss is protected throughout the Alps, so we work with specialized Alpine cultivators who grow the flowers organically. This ensures both the preservation of wild populations and the highest quality extract for our formulations.</p>
+        <p>At ERINGER SWITZERLAND, we're committed to sustainable sourcing. Wild Edelweiss is protected throughout the Alps, so we work with specialized Alpine cultivators who grow the flowers organically. This ensures both the preservation of wild populations and the highest quality extract for our formulations.</p>
 
         <p>Each flower is hand-harvested at peak potency and carefully processed to preserve its beneficial compounds. It's a labor-intensive process, but one that reflects our commitment to both quality and environmental stewardship.</p>
 

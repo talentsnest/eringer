@@ -58,7 +58,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            About ERINGER Switzerland
+            About ERINGER SWITZERLAND
           </motion.h1>
         </motion.div>
 
@@ -70,7 +70,7 @@ export default function AboutPage() {
         >
           <div className="prose prose-lg mx-auto text-gray-700 leading-relaxed space-y-6">
             <p className="text-xl text-center italic text-gray-600 mb-8">
-              "Born in the heart of the Swiss Alps, ERINGER Switzerland embodies the purity, 
+              "Born in the heart of the Swiss Alps, ERINGER SWITZERLAND embodies the purity, 
               precision, and timeless beauty of our homeland."
             </p>
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              At ERINGER Switzerland, we believe that luxury is not just about indulgence—it's about 
+              At ERINGER SWITZERLAND, we believe that luxury is not just about indulgence—it's about 
               efficacy, purity, and respect for both your skin and our planet. Every formula is meticulously 
               developed, tested, and refined to ensure it meets our exacting standards.
             </p>

@@ -62,7 +62,7 @@ export default function Header() {
             >
               <img
                 src={`/images/logo.png?ts=${logoVersion}`}
-                alt="ERINGER Switzerland"
+                alt="ERINGER SWITZERLAND"
                 width={300}
                 height={80}
                 className={`h-16 w-auto object-contain logo-landscape ${
