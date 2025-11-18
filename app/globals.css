@@ -157,9 +157,13 @@ img {
 
 /* Mobile landscape specific styles */
 @media (orientation: landscape) and (max-width: 768px) {
-  /* Hero section - 150vh height and 150px padding top */
+  /* Hero section - 150vh height */
   .hero-landscape {
     height: 150vh !important;
+  }
+  
+  /* Hero content - 150px padding top */
+  .hero-content-landscape {
     padding-top: 150px !important;
   }
   

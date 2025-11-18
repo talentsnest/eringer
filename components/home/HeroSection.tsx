@@ -85,7 +85,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center pt-[100px] md:pt-0 -mt-48 md:-mt-56 landscape:pt-[150px]">
+      <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center pt-[100px] md:pt-0 -mt-48 md:-mt-56 hero-content-landscape">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
