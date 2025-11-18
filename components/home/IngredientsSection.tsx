@@ -85,12 +85,21 @@ const allIngredients = [
 ]
 
 export default function IngredientsSection() {
-  const { t } = useTranslation()
+  const { t, translations } = useTranslation()
+
+  // Mapper les ingrédients avec leurs traductions
+  const ingredientsWithTranslations = allIngredients.map((ingredient) => {
+    const translation = translations.ingredients?.[ingredient.key as keyof typeof translations.ingredients]
+    return {
+      ...ingredient,
+      name: translation?.name || ingredient.name,
+    }
+  })
 
   // Créer 3 rows avec 10 ingrédients chacun (doublés pour l'animation infinie)
-  const row1 = [...allIngredients.slice(0, 10), ...allIngredients.slice(0, 10)]
-  const row2 = [...allIngredients.slice(10, 20), ...allIngredients.slice(10, 20)]
-  const row3 = [...allIngredients.slice(20, 30), ...allIngredients.slice(20, 30)]
+  const row1 = [...ingredientsWithTranslations.slice(0, 10), ...ingredientsWithTranslations.slice(0, 10)]
+  const row2 = [...ingredientsWithTranslations.slice(10, 20), ...ingredientsWithTranslations.slice(10, 20)]
+  const row3 = [...ingredientsWithTranslations.slice(20, 30), ...ingredientsWithTranslations.slice(20, 30)]
 
   return (
     <section className="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">

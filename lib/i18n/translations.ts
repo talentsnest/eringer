@@ -194,6 +194,70 @@ export const translations = {
         name: 'Mûrier Blanc',
         description: 'Actif anti-pollution qui renforce la barrière cutanée',
       },
+      cacao: {
+        name: 'Beurre de Cacao',
+        description: 'Nourrit et protège la peau avec des acides gras essentiels',
+      },
+      cafeine: {
+        name: 'Caféine',
+        description: 'Réduit les poches et stimule la microcirculation',
+      },
+      carthame: {
+        name: 'Carthame',
+        description: 'Huile légère qui hydrate sans graisser',
+      },
+      cireAbeille: {
+        name: 'Cire d\'Abeille',
+        description: 'Protecteur naturel qui forme une barrière douce',
+      },
+      coco: {
+        name: 'Huile de Coco',
+        description: 'Hydratant profond aux propriétés antibactériennes',
+      },
+      framboise: {
+        name: 'Framboise',
+        description: 'Antioxydant puissant qui illumine le teint',
+      },
+      glycerine: {
+        name: 'Glycérine',
+        description: 'Humectant qui attire et retient l\'humidité',
+      },
+      citrouille: {
+        name: 'Graines de Citrouille',
+        description: 'Riche en zinc et acides gras pour nourrir la peau',
+      },
+      amande: {
+        name: 'Huile d\'Amande',
+        description: 'Adoucissante et apaisante pour tous types de peaux',
+      },
+      framboiseSeed: {
+        name: 'Huile de Framboise',
+        description: 'Antioxydant et protecteur contre les UV',
+      },
+      noix: {
+        name: 'Huile de Noix',
+        description: 'Riche en oméga-3 pour nourrir et réparer',
+      },
+      saccharide: {
+        name: 'Saccharide',
+        description: 'Hydratant naturel qui améliore la rétention d\'eau',
+      },
+      macadamia: {
+        name: 'Macadamia',
+        description: 'Huile riche qui restaure la barrière cutanée',
+      },
+      mauve: {
+        name: 'Mauve',
+        description: 'Apaisante et anti-inflammatoire pour peaux sensibles',
+      },
+      peptides: {
+        name: 'Peptides',
+        description: 'Stimule la production de collagène pour une peau ferme',
+      },
+      vanille: {
+        name: 'Vanille',
+        description: 'Antioxydant naturel aux propriétés apaisantes',
+      },
     },
     // Testimonials
     testimonials: {
@@ -468,6 +532,70 @@ export const translations = {
       murierBlanc: {
         name: 'White Mulberry',
         description: 'Anti-pollution active that strengthens the skin barrier',
+      },
+      cacao: {
+        name: 'Cocoa Butter',
+        description: 'Nourishes and protects skin with essential fatty acids',
+      },
+      cafeine: {
+        name: 'Caffeine',
+        description: 'Reduces puffiness and stimulates microcirculation',
+      },
+      carthame: {
+        name: 'Safflower',
+        description: 'Light oil that hydrates without greasing',
+      },
+      cireAbeille: {
+        name: 'Beeswax',
+        description: 'Natural protector that forms a gentle barrier',
+      },
+      coco: {
+        name: 'Coconut Oil',
+        description: 'Deep moisturizer with antibacterial properties',
+      },
+      framboise: {
+        name: 'Raspberry',
+        description: 'Powerful antioxidant that illuminates complexion',
+      },
+      glycerine: {
+        name: 'Glycerin',
+        description: 'Humectant that attracts and retains moisture',
+      },
+      citrouille: {
+        name: 'Pumpkin Seeds',
+        description: 'Rich in zinc and fatty acids to nourish skin',
+      },
+      amande: {
+        name: 'Almond Oil',
+        description: 'Soothing and softening for all skin types',
+      },
+      framboiseSeed: {
+        name: 'Raspberry Seed',
+        description: 'Antioxidant and UV protector',
+      },
+      noix: {
+        name: 'Walnut Oil',
+        description: 'Rich in omega-3 to nourish and repair',
+      },
+      saccharide: {
+        name: 'Saccharide',
+        description: 'Natural moisturizer that improves water retention',
+      },
+      macadamia: {
+        name: 'Macadamia',
+        description: 'Rich oil that restores skin barrier',
+      },
+      mauve: {
+        name: 'Mallow',
+        description: 'Soothing and anti-inflammatory for sensitive skin',
+      },
+      peptides: {
+        name: 'Peptides',
+        description: 'Stimulates collagen production for firm skin',
+      },
+      vanille: {
+        name: 'Vanilla',
+        description: 'Natural antioxidant with soothing properties',
       },
     },
     // Testimonials
