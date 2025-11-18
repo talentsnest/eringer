@@ -108,9 +108,25 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="container mx-auto px-4 lg:px-8 py-6 border-t border-gray-200">
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
-          <p className="mb-4 md:mb-0">
-            © {new Date().getFullYear()} ERINGER Switzerland. {t('footer.copyright')}.
-          </p>
+          <div className="mb-4 md:mb-0 text-center md:text-left">
+            <p className="mb-2">
+              © {new Date().getFullYear()} ERINGER Switzerland. {t('footer.copyright')}.
+            </p>
+            <a
+              href="https://talentsnest.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-gray-600 hover:opacity-80 transition-opacity"
+            >
+              <span className="text-gray-400">Développé avec </span>
+              <span className="text-red-500">❤️</span>
+              <span className="text-gray-400"> par </span>
+              <span className="text-yellow-400 font-medium">Talents.</span>
+              <span className="bg-gradient-to-r from-orange-500 via-orange-300 to-pink-500 bg-clip-text text-transparent font-medium">
+                {' '}Agence Digitale de jeunes Talents
+              </span>
+            </a>
+          </div>
           <div className="flex space-x-6">
             <a
               href={`${baseUrl}/policies/privacy-policy`}
