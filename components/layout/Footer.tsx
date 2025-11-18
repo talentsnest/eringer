@@ -121,10 +121,7 @@ export default function Footer() {
               <span className="text-gray-400">Développé avec </span>
               <span className="text-red-500">❤️</span>
               <span className="text-gray-400"> par </span>
-              <span className="text-yellow-400 font-medium">Talents.</span>
-              <span className="bg-gradient-to-r from-orange-500 via-orange-300 to-pink-500 bg-clip-text text-transparent font-medium">
-                {' '}Agence Digitale de jeunes Talents
-              </span>
+              <span className="text-[#800020] font-bold">Talents. Agence Digitale de jeunes Talents</span>
             </a>
           </div>
           <div className="flex space-x-6">
