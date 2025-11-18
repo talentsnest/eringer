@@ -76,3 +76,4 @@ npm run optimize:all
 - Les scripts modifient les fichiers originaux après compression réussie
 - Les backups sont conservés pour récupération si nécessaire
 
+

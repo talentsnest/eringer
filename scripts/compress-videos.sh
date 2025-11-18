@@ -82,3 +82,4 @@ echo "💡 Pour utiliser les versions WebM dans le code, ajoutez:"
 echo "   <source src=\"video.webm\" type=\"video/webm\" />"
 echo "   avant le <source src=\"video.mp4\" type=\"video/mp4\" />"
 
+

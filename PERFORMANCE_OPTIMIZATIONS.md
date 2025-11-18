@@ -418,3 +418,4 @@ export default function RootLayout({ children }) {
 
 **Note:** Commencer par les optimisations rapides (Jour 1-2) pour des résultats immédiats, puis continuer avec les optimisations plus longues.
 
+

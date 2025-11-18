@@ -334,3 +334,4 @@ sharp -i input.png -o output.webp -q 80
 
 **Prochaines Étapes:** Commencer par la Phase 1 (Quick Wins) pour des résultats immédiats.
 
+

@@ -11,3 +11,4 @@ export default function WebVitals() {
   return null // Ce composant ne rend rien
 }
 
+

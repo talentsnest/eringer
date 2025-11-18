@@ -105,3 +105,4 @@ echo ""
 echo "💡 Next.js utilisera automatiquement WebP/AVIF si disponible"
 echo "   grâce à la configuration dans next.config.js"
 
+
