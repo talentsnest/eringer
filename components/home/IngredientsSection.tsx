@@ -93,6 +93,7 @@ export default function IngredientsSection() {
     return {
       ...ingredient,
       name: translation?.name || ingredient.name,
+      description: translation?.description || '',
     }
   })
 
@@ -189,9 +190,14 @@ export default function IngredientsSection() {
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900">
+                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
                       {ingredient.name}
                     </h3>
+                    {ingredient.description && (
+                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight">
+                        {ingredient.description}
+                      </p>
+                    )}
 
                     {/* Decorative Element */}
                     <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
@@ -225,9 +231,14 @@ export default function IngredientsSection() {
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900">
+                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
                       {ingredient.name}
                     </h3>
+                    {ingredient.description && (
+                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight">
+                        {ingredient.description}
+                      </p>
+                    )}
 
                     {/* Decorative Element */}
                     <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
@@ -261,9 +272,14 @@ export default function IngredientsSection() {
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900">
+                    <h3 className="text-sm lg:text-base font-serif font-bold text-gray-900 mb-1">
                       {ingredient.name}
                     </h3>
+                    {ingredient.description && (
+                      <p className="text-xs text-gray-600 line-clamp-2 leading-tight">
+                        {ingredient.description}
+                      </p>
+                    )}
 
                     {/* Decorative Element */}
                     <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-gold-100/20 to-transparent rounded-full blur-xl group-hover:from-gold-200/30 transition-colors" />
