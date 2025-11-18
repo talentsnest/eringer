@@ -50,6 +50,9 @@ public/videos/backup_*/
 public/videos/*_backup.*
 public/videos/*_backup.mp4
 public/videos/*_backup.webm
+# All video files (too large for git)
+public/videos/*.mp4
+public/videos/*.webm
 
 # Unnecessary files
 *.docx
