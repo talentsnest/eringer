@@ -12,9 +12,21 @@ export default function PageLoader() {
 
   // Gérer la vidéo quand elle est montée
   useEffect(() => {
-    const video = videoRef.current
-    if (!video || !isLoading || hasInitializedRef.current) return
+    if (!isLoading) return
     
+    const video = videoRef.current
+    if (!video) {
+      // Si pas de vidéo, fermer le loader après un court délai
+      timeoutRef.current = setTimeout(() => {
+        setFadeOut(true)
+        setTimeout(() => setIsLoading(false), 1000)
+      }, 500)
+      return () => {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current)
+      }
+    }
+
+    if (hasInitializedRef.current) return
     hasInitializedRef.current = true
 
     // Set video playback speed to 2x
@@ -40,7 +52,7 @@ export default function PageLoader() {
 
     // Forcer le lancement de la vidéo
     const forcePlay = () => {
-      if (hasEnded) return
+      if (hasEnded || !video) return
       video.play().catch((error) => {
         console.error('Erreur de lecture vidéo:', error)
         startFadeOut()
@@ -53,13 +65,13 @@ export default function PageLoader() {
     video.addEventListener('canplaythrough', forcePlay, { once: true })
     video.addEventListener('loadeddata', forcePlay, { once: true })
 
-    // Fallback agressif : passer au contenu après 1.5 secondes max
+    // Fallback agressif : passer au contenu après 3 secondes max
     timeoutRef.current = setTimeout(() => {
       if (!hasEnded) {
         console.warn('Timeout vidéo loader, passage au contenu')
         startFadeOut()
       }
-    }, 1500)
+    }, 3000)
 
     // Essayer de lancer immédiatement si déjà chargé
     if (video.readyState >= 3) {
@@ -67,7 +79,7 @@ export default function PageLoader() {
     } else {
       // Attendre un peu et réessayer
       setTimeout(() => {
-        if (video.readyState >= 2 && !hasEnded) {
+        if (video.readyState >= 2 && !hasEnded && video) {
           forcePlay()
         }
       }, 200)
@@ -78,7 +90,9 @@ export default function PageLoader() {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current)
       }
-      video.removeEventListener('ended', handleVideoEnd)
+      if (video) {
+        video.removeEventListener('ended', handleVideoEnd)
+      }
     }
   }, [isLoading, setFadeOut, setIsLoading])
 
@@ -123,6 +137,10 @@ export default function PageLoader() {
             if (video.paused) {
               video.play().catch(() => {})
             }
+          }}
+          onEnded={() => {
+            setFadeOut(true)
+            setTimeout(() => setIsLoading(false), 1000)
           }}
           onError={() => {
             console.error('Erreur de chargement vidéo loader')
