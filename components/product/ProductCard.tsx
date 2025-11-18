@@ -146,11 +146,14 @@ const ProductCard = memo(function ProductCard({
       }}
       onMouseLeave={() => {
         if (!isMobile) {
-        setIsHovered(false)
-        if (hoverVideo && videoRef.current) {
-          videoRef.current.pause()
-          videoRef.current.currentTime = 0
+          setIsHovered(false)
+          if (hoverVideo && videoRef.current) {
+            videoRef.current.pause()
+            videoRef.current.currentTime = 0
           }
+          // Réinitialiser l'état vidéo pour le prochain hover
+          setIsVideoReady(false)
+          setIsVideoLoading(false)
         }
       }}
       onMouseMove={handleMouseMove}
