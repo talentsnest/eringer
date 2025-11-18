@@ -7,12 +7,12 @@ import { useTranslation } from '@/lib/i18n/useTranslation'
 const getLocations = (switzerland: string) => [
   {
     id: 1,
-    name: 'Hôtel Eringer Hérémence',
+    name: 'Hôtel ERINGER Hérémence',
     address: `Hérémence, ${switzerland}`,
   },
   {
     id: 2,
-    name: 'Eringer Institut Hérémence',
+    name: 'ERINGER Institut Hérémence',
     address: `Hérémence, ${switzerland}`,
   },
   {

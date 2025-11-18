@@ -109,7 +109,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 lg:px-8 py-6 border-t border-gray-200">
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
           <p className="mb-4 md:mb-0">
-            © {new Date().getFullYear()} Eringer Switzerland. {t('footer.copyright')}.
+            © {new Date().getFullYear()} ERINGER Switzerland. {t('footer.copyright')}.
           </p>
           <div className="flex space-x-6">
             <a

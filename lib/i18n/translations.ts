@@ -70,7 +70,7 @@ export const translations = {
       'creme-eclat': {
         name: 'Crème Éclat Équilibre et Lumière',
         description: 'Crème éclat pour peaux mixtes',
-        tags: ['Éclat', 'Équilibre', 'Fenouil marin', 'Papaye', 'Anti-pollution'],
+        tags: ['Éclat', 'Équilibre', 'Criste Marine', 'Papaye', 'Anti-pollution'],
       },
       'serum-ultra': {
         name: 'Sérum Ultra Hydratant',
@@ -85,7 +85,7 @@ export const translations = {
       'serum-perles': {
         name: 'Sérum Perles Anti-Pollution',
         description: 'Sérum bouclier anti-pollution naturel aux perles actives',
-        tags: ['Anti-pollution', 'Mûrier blanc', 'Fucus', 'Pivoine'],
+        tags: ['Anti-pollution', 'Mûrier blanc', 'Extrait de Varech', 'Pivoine'],
       },
       'masque-anti-age': {
         name: 'Masque Anti-Âge',
@@ -135,43 +135,31 @@ export const translations = {
         description: 'Fleur alpine suisse reconnue pour ses puissantes propriétés antioxydantes et anti-âge',
       },
       reishi: {
-        name: 'Reishi',
+        name: 'Reishi (Ganoderma)',
         description: 'Champignon adaptogène qui favorise la résilience de la peau et l\'éclat naturel',
       },
       aloeVera: {
         name: 'Aloe Vera',
         description: 'Hydratant et apaisant en profondeur, parfait pour les peaux sensibles',
       },
-      swissHoney: {
-        name: 'Swiss Honey',
-        description: 'Humectant naturel qui retient l\'humidité et nourrit la peau',
-      },
       immortelle: {
-        name: 'Immortelle',
+        name: 'Immortelle (Fleur d\'Immortelle)',
         description: 'Fleur dorée aux propriétés régénérantes exceptionnelles et anti-inflammatoires',
-      },
-      camomille: {
-        name: 'Camomille',
-        description: 'Apaisante et anti-inflammatoire, idéale pour calmer les peaux sensibles et irritées',
-      },
-      eauAlpine: {
-        name: 'Eau Alpine',
-        description: 'Eau de source alpine riche en minéraux pour une hydratation pure et revitalisante',
       },
       avocat: {
         name: 'Avocat',
         description: 'Riche en acides gras essentiels pour nourrir et protéger la barrière cutanée',
       },
       grenade: {
-        name: 'Grenade',
+        name: 'Extrait de Fleur de Grenade',
         description: 'Antioxydant puissant qui combat les radicaux libres et illumine le teint',
       },
       pivoine: {
-        name: 'Pivoine',
+        name: 'Extrait de Fleur de Pivoine',
         description: 'Apaisante et anti-inflammatoire, idéale pour les peaux sensibles et réactives',
       },
       prele: {
-        name: 'Prêle',
+        name: 'Extrait de Prêle des Champs',
         description: 'Riche en silice pour renforcer la structure de la peau et améliorer l\'élasticité',
       },
       echinacee: {
@@ -179,27 +167,27 @@ export const translations = {
         description: 'Plante purifiante aux propriétés antibactériennes et apaisantes',
       },
       papaye: {
-        name: 'Papaye',
+        name: 'Fruit de Papaye / Papaye',
         description: 'Enzyme naturelle qui exfolie en douceur et révèle un éclat radieux',
       },
       acmella: {
         name: 'Acmella Oleracea',
         description: 'Plante aux propriétés lissantes et raffermissantes pour un effet liftant',
       },
-      fenouilMarin: {
-        name: 'Fenouil Marin',
+      cristeMarine: {
+        name: 'Criste Marine',
         description: 'Protecteur contre la pollution et les agressions environnementales',
       },
       jojoba: {
-        name: 'Jojoba',
+        name: 'Huile de Jojoba',
         description: 'Huile légère qui régule le sébum et hydrate sans graisser',
       },
       theVert: {
-        name: 'Thé Vert',
+        name: 'Extrait de Thé Vert',
         description: 'Antioxydant puissant qui protège la peau des radicaux libres',
       },
-      fucus: {
-        name: 'Fucus',
+      varech: {
+        name: 'Extrait de Varech',
         description: 'Algue marine riche en minéraux qui purifie et détoxifie la peau',
       },
       murierBlanc: {
@@ -242,15 +230,15 @@ export const translations = {
       min: 'min',
       posts: [
         {
-          title: 'Eringer Lab Notes : Pourquoi nos actifs alpins surpassent les standards du skincare',
+          title: 'ERINGER Lab Notes : Pourquoi nos actifs alpins surpassent les standards du skincare',
           excerpt: 'Nos chercheurs dévoilent la façon dont les plantes alpines, exposées à des conditions extrêmes, développent des molécules rares capables d\'améliorer la fermeté, l\'hydratation et l\'éclat de la peau. Une science de précision au service de la beauté.',
           category: 'Science',
           date: '15 mai 2024',
           readTime: '5 min',
         },
         {
-          title: 'Inside Eringer : La philosophie qui guide la création de chaque formule',
-          excerpt: 'Entre naturalité, efficacité clinique et éthique de formulation, Eringer Switzerland explique comment chaque produit est conçu pour offrir une expérience sensorielle inégalée, en harmonie avec la peau et la nature.',
+          title: 'Inside ERINGER : La philosophie qui guide la création de chaque formule',
+          excerpt: 'Entre naturalité, efficacité clinique et éthique de formulation, ERINGER Switzerland explique comment chaque produit est conçu pour offrir une expérience sensorielle inégalée, en harmonie avec la peau et la nature.',
           category: 'Philosophie',
           date: '12 mai 2024',
           readTime: '6 min',
@@ -263,14 +251,14 @@ export const translations = {
           readTime: '5 min',
         },
         {
-          title: 'Textures d\'exception : Comment nous créons la sensorialité unique Eringer',
-          excerpt: 'Plongez dans l\'univers des textures Eringer — crèmes aériennes, gels fondants, perles lumineuses. Un travail millimétré entre science et émotion, pensé pour sublimer chaque geste de votre routine.',
+          title: 'Textures d\'exception : Comment nous créons la sensorialité unique ERINGER',
+          excerpt: 'Plongez dans l\'univers des textures ERINGER — crèmes aériennes, gels fondants, perles lumineuses. Un travail millimétré entre science et émotion, pensé pour sublimer chaque geste de votre routine.',
           category: 'Savoir-faire',
           date: '8 mai 2024',
           readTime: '4 min',
         },
         {
-          title: 'Eringer Alpine Journal : La nature comme laboratoire à ciel ouvert',
+          title: 'ERINGER Alpine Journal : La nature comme laboratoire à ciel ouvert',
           excerpt: 'De la montagne à votre peau : comment nous sélectionnons les plantes les plus pures, les eaux les plus riches en minéraux et les actifs les plus performants, inspirés directement par l\'écosystème alpin.',
           category: 'Nature',
           date: '5 mai 2024',
@@ -278,7 +266,7 @@ export const translations = {
         },
         {
           title: 'Innovation suisse : Nos engagements pour une cosmétique transparente et responsable',
-          excerpt: 'Une vision claire : formules clean, ingrédients tracés, production maîtrisée, tests rigoureux. Eringer Switzerland révèle ses engagements durables pour une beauté aussi authentique qu\'efficace.',
+          excerpt: 'Une vision claire : formules clean, ingrédients tracés, production maîtrisée, tests rigoureux. ERINGER Switzerland révèle ses engagements durables pour une beauté aussi authentique qu\'efficace.',
           category: 'Durabilité',
           date: '3 mai 2024',
           readTime: '7 min',
@@ -357,7 +345,7 @@ export const translations = {
       'creme-eclat': {
         name: 'Radiance Cream Balance & Light',
         description: 'Radiance cream for combination skin',
-        tags: ['Radiance', 'Balance', 'Sea fennel', 'Papaya', 'Anti-pollution'],
+        tags: ['Radiance', 'Balance', 'Sea Samphire', 'Papaya', 'Anti-pollution'],
       },
       'serum-ultra': {
         name: 'Ultra Hydrating Serum',
@@ -372,7 +360,7 @@ export const translations = {
       'serum-perles': {
         name: 'Pearl Anti-Pollution Serum',
         description: 'Natural anti-pollution shield serum with active pearls',
-        tags: ['Anti-pollution', 'White mulberry', 'Fucus', 'Peony'],
+        tags: ['Anti-pollution', 'White mulberry', 'Kelp Extract', 'Peony'],
       },
       'masque-anti-age': {
         name: 'Anti-Aging Mask',
@@ -422,43 +410,31 @@ export const translations = {
         description: 'Swiss Alpine flower renowned for its powerful antioxidant and anti-aging properties',
       },
       reishi: {
-        name: 'Reishi',
+        name: 'Reishi (Ganoderma)',
         description: 'Adaptogenic mushroom that promotes skin resilience and natural radiance',
       },
       aloeVera: {
         name: 'Aloe Vera',
         description: 'Deeply hydrating and soothing, perfect for sensitive skin',
       },
-      swissHoney: {
-        name: 'Swiss Honey',
-        description: 'Natural humectant that retains moisture and nourishes the skin',
-      },
       immortelle: {
-        name: 'Immortelle',
+        name: 'Immortelle (Immortelle Flower)',
         description: 'Golden flower with exceptional regenerative and anti-inflammatory properties',
-      },
-      camomille: {
-        name: 'Chamomile',
-        description: 'Soothing and anti-inflammatory, ideal for calming sensitive and irritated skin',
-      },
-      eauAlpine: {
-        name: 'Alpine Water',
-        description: 'Alpine spring water rich in minerals for pure and revitalizing hydration',
       },
       avocat: {
         name: 'Avocado',
         description: 'Rich in essential fatty acids to nourish and protect the skin barrier',
       },
       grenade: {
-        name: 'Pomegranate',
+        name: 'Pomegranate Flower Extract',
         description: 'Powerful antioxidant that fights free radicals and illuminates the complexion',
       },
       pivoine: {
-        name: 'Peony',
+        name: 'Peony Flower Extract',
         description: 'Soothing and anti-inflammatory, ideal for sensitive and reactive skin',
       },
       prele: {
-        name: 'Horsetail',
+        name: 'Field Horsetail Extract',
         description: 'Rich in silica to strengthen skin structure and improve elasticity',
       },
       echinacee: {
@@ -466,27 +442,27 @@ export const translations = {
         description: 'Purifying plant with antibacterial and soothing properties',
       },
       papaye: {
-        name: 'Papaya',
+        name: 'Papaya Fruit / Papaya',
         description: 'Natural enzyme that gently exfoliates and reveals radiant glow',
       },
       acmella: {
         name: 'Acmella Oleracea',
         description: 'Plant with smoothing and firming properties for a lifting effect',
       },
-      fenouilMarin: {
-        name: 'Sea Fennel',
+      cristeMarine: {
+        name: 'Sea Samphire',
         description: 'Protective against pollution and environmental aggressions',
       },
       jojoba: {
-        name: 'Jojoba',
+        name: 'Jojoba Oil',
         description: 'Light oil that regulates sebum and hydrates without greasing',
       },
       theVert: {
-        name: 'Green Tea',
+        name: 'Green Tea Extract',
         description: 'Powerful antioxidant that protects the skin from free radicals',
       },
-      fucus: {
-        name: 'Fucus',
+      varech: {
+        name: 'Kelp Extract',
         description: 'Seaweed rich in minerals that purifies and detoxifies the skin',
       },
       murierBlanc: {
@@ -529,15 +505,15 @@ export const translations = {
       min: 'min',
       posts: [
         {
-          title: 'Eringer Lab Notes: Why Our Alpine Actives Surpass Skincare Standards',
+          title: 'ERINGER Lab Notes: Why Our Alpine Actives Surpass Skincare Standards',
           excerpt: 'Our researchers reveal how Alpine plants, exposed to extreme conditions, develop rare molecules capable of improving skin firmness, hydration, and radiance. Precision science in service of beauty.',
           category: 'Science',
           date: 'May 15, 2024',
           readTime: '5 min',
         },
         {
-          title: 'Inside Eringer: The Philosophy Guiding Every Formula Creation',
-          excerpt: 'Between naturality, clinical efficacy, and formulation ethics, Eringer Switzerland explains how each product is designed to offer an unparalleled sensory experience, in harmony with skin and nature.',
+          title: 'Inside ERINGER: The Philosophy Guiding Every Formula Creation',
+          excerpt: 'Between naturality, clinical efficacy, and formulation ethics, ERINGER Switzerland explains how each product is designed to offer an unparalleled sensory experience, in harmony with skin and nature.',
           category: 'Philosophy',
           date: 'May 12, 2024',
           readTime: '6 min',
@@ -550,14 +526,14 @@ export const translations = {
           readTime: '5 min',
         },
         {
-          title: 'Exceptional Textures: How We Create the Unique Eringer Sensoriality',
-          excerpt: 'Dive into the world of Eringer textures — airy creams, melting gels, luminous pearls. A meticulous work between science and emotion, designed to enhance every gesture of your routine.',
+          title: 'Exceptional Textures: How We Create the Unique ERINGER Sensoriality',
+          excerpt: 'Dive into the world of ERINGER textures — airy creams, melting gels, luminous pearls. A meticulous work between science and emotion, designed to enhance every gesture of your routine.',
           category: 'Craftsmanship',
           date: 'May 8, 2024',
           readTime: '4 min',
         },
         {
-          title: 'Eringer Alpine Journal: Nature as an Open-Air Laboratory',
+          title: 'ERINGER Alpine Journal: Nature as an Open-Air Laboratory',
           excerpt: 'From mountain to your skin: how we select the purest plants, the most mineral-rich waters, and the most effective actives, directly inspired by the Alpine ecosystem.',
           category: 'Nature',
           date: 'May 5, 2024',
@@ -565,7 +541,7 @@ export const translations = {
         },
         {
           title: 'Swiss Innovation: Our Commitments to Transparent and Responsible Cosmetics',
-          excerpt: 'A clear vision: clean formulas, traced ingredients, controlled production, rigorous testing. Eringer Switzerland reveals its sustainable commitments for beauty that is as authentic as it is effective.',
+          excerpt: 'A clear vision: clean formulas, traced ingredients, controlled production, rigorous testing. ERINGER Switzerland reveals its sustainable commitments for beauty that is as authentic as it is effective.',
           category: 'Sustainability',
           date: 'May 3, 2024',
           readTime: '7 min',
