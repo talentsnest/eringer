@@ -81,7 +81,7 @@ export default function HeroSection() {
         >
           <source src="/videos/hero2.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/60 to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-white" />
       </motion.div>
 
       {/* Content */}
