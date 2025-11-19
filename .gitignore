@@ -56,6 +56,20 @@ public/videos/*.webm
 # Exception: keep essential videos for hero and loader
 !public/videos/loader.mp4
 !public/videos/hero2.mp4
+# Exception: keep product videos for hover/autoplay
+!public/videos/product1.mp4
+!public/videos/product2-2.mp4
+!public/videos/product3.mp4
+!public/videos/creme-visage.mp4
+!public/videos/creme-anti-age.mp4
+!public/videos/serum-ultra.mp4
+!public/videos/serum-anti-cernes.mp4
+!public/videos/serum-anti-age.mp4
+!public/videos/masque-anti-age.mp4
+!public/videos/lotion-nettoyante.mp4
+!public/videos/lotion-corporelle.mp4
+!public/videos/gelee-micellaire.mp4
+!public/videos/stick-levres.mp4
 
 # Unnecessary files
 *.docx
