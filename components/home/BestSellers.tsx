@@ -175,7 +175,7 @@ export default function BestSellers() {
     hydratation: ['masque-hydratant', 'creme-eclat', 'serum-ultra', 'serum-anti-cernes', 'serum-perles'],
     antiAging: ['masque-anti-age', 'creme-anti-age', 'serum-anti-age', 'serum-anti-cernes', 'serum-perles'],
     nettoyage: ['lotion-nettoyante', 'gelee-micellaire'],
-    corps: ['gel-anti-cellulite', 'lotion-corporelle'],
+    corps: ['gel-anti-cellulite', 'lotion-corporelle', 'stick-levres'],
   }
 
   const categoryNames = {
@@ -201,39 +201,42 @@ export default function BestSellers() {
           }
         })
 
+        const isFullWidth = categoryKey === 'hydratation' || categoryKey === 'antiAging'
+        const gridCols = isFullWidth ? 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
+
         return (
           <section key={categoryKey} id={categoryKey} className={categoryIndex > 0 ? 'mt-20' : ''}>
-            <div className="container mx-auto px-4 lg:px-8">
-              {/* Section Header */}
-              <motion.div
-                className="text-center mb-12"
+            {/* Section Header */}
+            <motion.div
+              className={`text-center mb-12 ${isFullWidth ? '' : 'container mx-auto px-4 lg:px-8'}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <motion.p
+                className="text-sm text-gold-600 font-medium tracking-[0.3em] uppercase mb-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                {categoryNames[`${categoryKey}Subtitle` as keyof typeof categoryNames] || categoryNames[categoryKey as keyof typeof categoryNames]}
+              </motion.p>
+              <motion.h2
+                className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <motion.p
-                  className="text-sm text-gold-600 font-medium tracking-[0.3em] uppercase mb-4"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                  {categoryNames[`${categoryKey}Subtitle` as keyof typeof categoryNames] || categoryNames[categoryKey as keyof typeof categoryNames]}
-                </motion.p>
-                <motion.h2
-                  className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                >
-                  {categoryNames[categoryKey as keyof typeof categoryNames]}
-                </motion.h2>
-              </motion.div>
+                {categoryNames[categoryKey as keyof typeof categoryNames]}
+              </motion.h2>
+            </motion.div>
 
-              {/* Products Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 products-grid-landscape">
+            {/* Products Grid */}
+            <div className={isFullWidth ? 'w-full' : 'container mx-auto px-4 lg:px-8'}>
+              <div className={`grid ${gridCols} gap-8 ${isFullWidth ? 'px-0' : 'products-grid-landscape'}`}>
                 {products.map((product, index) => (
                   <motion.div
                     key={product.id}
