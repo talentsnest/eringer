@@ -144,7 +144,6 @@ export default function BestSellersSection() {
           {bestSellers.map((product, index) => (
             <motion.div
               key={product.id}
-              className="lg:max-w-[75%] lg:mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
