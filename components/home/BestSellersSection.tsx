@@ -110,7 +110,7 @@ export default function BestSellersSection() {
 
   return (
     <section className="py-10 lg:py-16 bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="mx-auto px-4 lg:px-8 max-w-[960px]">
         {/* Section Header */}
         <motion.div
           className="text-center mb-12"
@@ -144,6 +144,7 @@ export default function BestSellersSection() {
           {bestSellers.map((product, index) => (
             <motion.div
               key={product.id}
+              className="lg:max-w-[75%] lg:mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
