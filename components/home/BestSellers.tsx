@@ -261,7 +261,7 @@ export default function BestSellers() {
       
       {/* Nettoyage & Corps side by side */}
       <section className="mt-10 w-full px-[30px]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {['nettoyage', 'corps'].map((categoryKey) => {
             const productKeys = categories[categoryKey as keyof typeof categories]
             const products = productKeys.map((productKey) => {
@@ -273,8 +273,10 @@ export default function BestSellers() {
               }
             })
 
+            const colSpan = categoryKey === 'nettoyage' ? 'lg:col-span-2' : 'lg:col-span-3'
+
             return (
-              <div key={categoryKey} id={categoryKey}>
+              <div key={categoryKey} id={categoryKey} className={colSpan}>
                 {/* Section Header */}
                 <motion.div
                   className="text-center mb-12"

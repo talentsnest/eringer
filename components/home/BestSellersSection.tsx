@@ -139,8 +139,8 @@ export default function BestSellersSection() {
           </motion.h2>
         </motion.div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 products-grid-landscape">
+        {/* Products Grid - 2 rows of 3 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 products-grid-landscape">
           {bestSellers.map((product, index) => (
             <motion.div
               key={product.id}
