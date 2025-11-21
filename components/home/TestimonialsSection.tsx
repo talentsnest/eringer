@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
   const duplicatedTestimonialsRow2 = [...testimonialsRow2, ...testimonialsRow2]
 
   return (
-    <section className="py-20 lg:py-32 bg-white relative overflow-hidden w-full">
+    <section className="py-10 lg:py-16 bg-white relative overflow-hidden w-full">
       <div className="w-full">
         {/* Section Header */}
         <motion.div

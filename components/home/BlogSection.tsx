@@ -34,7 +34,7 @@ export default function BlogSection() {
   const blogPosts = translations.blog?.posts || []
 
   return (
-    <section className="py-12 lg:py-16 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-6 lg:py-8 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <motion.div

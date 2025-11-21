@@ -108,7 +108,7 @@ export default function IngredientsSection() {
   const row2 = [...ingredientsWithTranslations.slice(15, 30), ...ingredientsWithTranslations.slice(15, 30)]
 
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section className="py-10 lg:py-16 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-5">
         <div

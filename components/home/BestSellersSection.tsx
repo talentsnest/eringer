@@ -109,7 +109,7 @@ export default function BestSellersSection() {
   const bestSellers = getBestSellers(baseUrl, translations, locale)
 
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-10 lg:py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <motion.div

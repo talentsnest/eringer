@@ -32,7 +32,7 @@ export default function WhereToFindUsSection() {
   const locations = getLocations(t('common.switzerland'))
 
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-10 lg:py-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <motion.div

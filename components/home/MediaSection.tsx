@@ -23,7 +23,7 @@ export default function MediaSection() {
   const { t } = useTranslation()
 
   return (
-    <section className="py-12 lg:py-16 bg-gray-50 overflow-x-hidden">
+    <section className="py-6 lg:py-8 bg-gray-50 overflow-x-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           className="text-center mb-8"

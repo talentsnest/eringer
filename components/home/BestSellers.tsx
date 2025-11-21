@@ -190,7 +190,7 @@ export default function BestSellers() {
   }
 
   return (
-    <div className="py-20 lg:py-32 bg-white">
+    <div className="py-10 lg:py-16 bg-white">
       {Object.entries(categories).map(([categoryKey, productKeys], categoryIndex) => {
         const products = productKeys.map((productKey) => {
           const config = productConfigs[productKey as keyof typeof productConfigs]
@@ -204,11 +204,16 @@ export default function BestSellers() {
         const isFullWidth = categoryKey === 'hydratation' || categoryKey === 'antiAging'
         const gridCols = isFullWidth ? 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
 
+        // Skip rendering nettoyage and corps individually - they'll be rendered together
+        if (categoryKey === 'nettoyage' || categoryKey === 'corps') {
+          return null
+        }
+
         return (
-          <section key={categoryKey} id={categoryKey} className={categoryIndex > 0 ? 'mt-20' : ''}>
+          <section key={categoryKey} id={categoryKey} className={categoryIndex > 0 ? 'mt-10' : ''}>
             {/* Section Header */}
             <motion.div
-              className={`text-center mb-12 ${isFullWidth ? '' : 'container mx-auto px-4 lg:px-8'}`}
+              className={`text-center mb-12 ${isFullWidth ? 'px-[30px]' : 'container mx-auto px-4 lg:px-8'}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -235,8 +240,8 @@ export default function BestSellers() {
             </motion.div>
 
             {/* Products Grid */}
-            <div className={isFullWidth ? 'w-full' : 'container mx-auto px-4 lg:px-8'}>
-              <div className={`grid ${gridCols} gap-8 ${isFullWidth ? 'px-0' : 'products-grid-landscape'}`}>
+            <div className={isFullWidth ? 'w-full px-[30px]' : 'container mx-auto px-4 lg:px-8'}>
+              <div className={`grid ${gridCols} gap-8 ${isFullWidth ? '' : 'products-grid-landscape'}`}>
                 {products.map((product, index) => (
                   <motion.div
                     key={product.id}
@@ -253,6 +258,71 @@ export default function BestSellers() {
           </section>
         )
       })}
+      
+      {/* Nettoyage & Corps side by side */}
+      <section className="mt-10 w-full px-[30px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {['nettoyage', 'corps'].map((categoryKey) => {
+            const productKeys = categories[categoryKey as keyof typeof categories]
+            const products = productKeys.map((productKey) => {
+              const config = productConfigs[productKey as keyof typeof productConfigs]
+              const translated = getProductData(productKey, currentTranslations, locale, baseUrl)
+              return {
+                ...config,
+                ...translated,
+              }
+            })
+
+            return (
+              <div key={categoryKey} id={categoryKey}>
+                {/* Section Header */}
+                <motion.div
+                  className="text-center mb-12"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <motion.p
+                    className="text-sm text-gold-600 font-medium tracking-[0.3em] uppercase mb-4"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                  >
+                    {categoryNames[`${categoryKey}Subtitle` as keyof typeof categoryNames] || categoryNames[categoryKey as keyof typeof categoryNames]}
+                  </motion.p>
+                  <motion.h2
+                    className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                  >
+                    {categoryNames[categoryKey as keyof typeof categoryNames]}
+                  </motion.h2>
+                </motion.div>
+
+                {/* Products Grid - Single row */}
+                <div className="flex gap-4">
+                  {products.map((product, index) => (
+                    <motion.div
+                      key={product.id}
+                      className="flex-1"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.3) }}
+                    >
+                      <ProductCard {...product} />
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </section>
     </div>
   )
 }
