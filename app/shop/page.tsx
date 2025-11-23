@@ -43,7 +43,7 @@ const products = [
     name: 'Lotion Nettoyante et Purifiante',
     description: 'Purifying & cleansing face lotion for balanced and luminous skin',
     price: 29,
-    image: '/images/lotion-nettoyante.png',
+    image: '/images/lotion-nettoyante-3.png',
     category: 'Face Care',
     tags: ['Cleansing', 'Purifying', 'Echinacea', 'Peony', 'Aloe Vera'],
   },

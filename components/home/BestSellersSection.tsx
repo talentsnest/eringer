@@ -88,8 +88,8 @@ const getBestSellers = (baseUrl: string, translations: any, locale: string) => {
       id: '5',
       ...getProductData('lotion-nettoyante'),
       price: 29,
-      image: '/images/lotion-nettoyante.png',
-      hoverVideo: '/videos/lotion-nettoyante.mp4',
+      image: '/images/lotion-nettoyante-3.png',
+      hoverVideo: '/videos/lotion-nettoyante-3.mp4',
       badge: translations.common?.bestSeller || 'Best Seller',
     },
     {

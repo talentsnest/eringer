@@ -142,8 +142,8 @@ export default function BestSellers() {
     'lotion-nettoyante': {
       id: '5',
       price: 29,
-      image: '/images/lotion-nettoyante.png',
-      hoverVideo: '/videos/lotion-nettoyante.mp4',
+      image: '/images/lotion-nettoyante-3.png',
+      hoverVideo: '/videos/lotion-nettoyante-3.mp4',
     },
     'gelee-micellaire': {
       id: '13',
