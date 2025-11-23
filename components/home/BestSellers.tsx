@@ -154,8 +154,8 @@ export default function BestSellers() {
     'gel-anti-cellulite': {
       id: '3',
       price: 79,
-      image: '/images/product3.png',
-      hoverVideo: '/videos/product3.mp4',
+      image: '/images/gel-anti-cellulite-2.png',
+      hoverVideo: '/videos/gel-anti-cellulite-2.mp4',
     },
     'lotion-corporelle': {
       id: '4',
