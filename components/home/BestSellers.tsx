@@ -148,8 +148,8 @@ export default function BestSellers() {
     'gelee-micellaire': {
       id: '13',
       price: 32,
-      image: '/images/gelee-micellaire.png',
-      hoverVideo: '/videos/gelee-micellaire.mp4',
+      image: '/images/gelee-micellaire-3.png',
+      hoverVideo: '/videos/gelee-micellaire-3.mp4',
     },
     'gel-anti-cellulite': {
       id: '3',
