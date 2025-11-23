@@ -25,7 +25,7 @@ const products = [
     description: 'Anti-cellulite gel for sculpting and firming with cooling and firming effects',
     price: 79,
     image: '/images/gel-anti-cellulite-2.png',
-    hoverVideo: '/videos/gel-anti-cellulite-2.mp4',
+    hoverVideo: '/videos/gel-anti-cellulite-3.mp4',
     category: 'Body Care',
     tags: ['Firming', 'Toning', 'Cooling effect', 'Quick absorption'],
   },

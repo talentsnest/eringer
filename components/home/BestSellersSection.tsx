@@ -97,7 +97,7 @@ const getBestSellers = (baseUrl: string, translations: any, locale: string) => {
       ...getProductData('gel-anti-cellulite'),
       price: 79,
       image: '/images/gel-anti-cellulite-2.png',
-      hoverVideo: '/videos/gel-anti-cellulite-2.mp4',
+      hoverVideo: '/videos/gel-anti-cellulite-3.mp4',
       badge: translations.common?.bestSeller || 'Best Seller',
     },
   ]

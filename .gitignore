@@ -72,6 +72,8 @@ public/videos/*.webm
 !public/videos/stick-levres.mp4
 !public/videos/gel-anti-cellulite-2.mp4
 !public/videos/gel-anti-cellulite-2.webm
+!public/videos/gel-anti-cellulite-3.mp4
+!public/videos/gel-anti-cellulite-3.webm
 
 # Unnecessary files
 *.docx
