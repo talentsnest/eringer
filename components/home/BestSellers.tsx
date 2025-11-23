@@ -144,18 +144,21 @@ export default function BestSellers() {
       price: 29,
       image: '/images/lotion-nettoyante-3.png',
       hoverVideo: '/videos/lotion-nettoyante-3.mp4',
+      badge: t('common.bestSeller'),
     },
     'gelee-micellaire': {
       id: '13',
       price: 32,
       image: '/images/gelee-micellaire-3.png',
       hoverVideo: '/videos/gelee-micellaire-3.mp4',
+      badge: t('common.bestSeller'),
     },
     'gel-anti-cellulite': {
       id: '3',
       price: 59,
       image: '/images/gel-anti-cellulite-2.png',
       hoverVideo: '/videos/gel-anti-cellulite-3.mp4',
+      badge: t('common.bestSeller'),
     },
     'lotion-corporelle': {
       id: '4',
