@@ -79,7 +79,7 @@ const getBestSellers = (baseUrl: string, translations: any, locale: string) => {
     {
       id: '7',
       ...getProductData('masque-anti-age'),
-      price: 89,
+      price: 59,
       image: '/images/masque-anti-age.png',
       hoverVideo: '/videos/masque-anti-age.mp4',
       badge: translations.common?.bestSeller || 'Best Seller',
@@ -95,7 +95,7 @@ const getBestSellers = (baseUrl: string, translations: any, locale: string) => {
     {
       id: '3',
       ...getProductData('gel-anti-cellulite'),
-      price: 79,
+      price: 59,
       image: '/images/gel-anti-cellulite-2.png',
       hoverVideo: '/videos/gel-anti-cellulite-3.mp4',
       badge: translations.common?.bestSeller || 'Best Seller',

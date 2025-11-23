@@ -122,7 +122,7 @@ export default function BestSellers() {
     },
     'masque-anti-age': {
       id: '7',
-      price: 89,
+      price: 59,
       image: '/images/masque-anti-age.png',
       hoverVideo: '/videos/masque-anti-age.mp4',
       badge: t('common.bestSeller'),
@@ -153,7 +153,7 @@ export default function BestSellers() {
     },
     'gel-anti-cellulite': {
       id: '3',
-      price: 79,
+      price: 59,
       image: '/images/gel-anti-cellulite-2.png',
       hoverVideo: '/videos/gel-anti-cellulite-3.mp4',
     },
@@ -305,12 +305,12 @@ export default function BestSellers() {
                   </motion.h2>
                 </motion.div>
 
-                {/* Products Grid - Single row */}
-                <div className="flex gap-4">
+                {/* Products Grid - Single row on desktop, 1 per row on mobile */}
+                <div className="flex flex-col md:flex-row gap-4">
                   {products.map((product, index) => (
                     <motion.div
                       key={product.id}
-                      className="flex-1"
+                      className="w-full md:flex-1"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: "-50px" }}
