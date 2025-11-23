@@ -307,7 +307,7 @@ export const translations = {
           category: 'Philosophie',
           date: '10 novembre 2025',
           readTime: '6 min',
-          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/the-eringer-switzerland-philosophy-creating-skincare-that-combines-nature-science-and-sensory-excellence',
+          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/philosophy-skincare',
         },
         {
           title: 'Le pouvoir de l\'Immortelle : la fleur intemporelle au cœur des rituels anti-âge ERINGER SWITZERLAND',
@@ -315,7 +315,7 @@ export const translations = {
           category: 'Ingrédients',
           date: '3 novembre 2025',
           readTime: '5 min',
-          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/the-power-of-immortelle-the-timeless-flower-at-the-heart-of-eringer-switzerlands-anti-aging-rituals',
+          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/the-power-of-immortelle-the-timeless-flower-at-the-heart-of-eringer-switzerland-s-anti-aging-rituals',
         },
         {
           title: 'Textures d\'exception : Comment ERINGER SWITZERLAND conçoit une expérience sensorielle unique',
@@ -323,7 +323,7 @@ export const translations = {
           category: 'Savoir-faire',
           date: '27 octobre 2025',
           readTime: '4 min',
-          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/exceptional-textures-how-eringer-switzerland-designs-a-unique-sensory-experience',
+          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/unique-sensory-experience',
         },
         {
           title: 'La nature comme guide : comment ERINGER SWITZERLAND sélectionne des ingrédients puissants, purs et responsables',
@@ -331,7 +331,7 @@ export const translations = {
           category: 'Nature',
           date: '20 octobre 2025',
           readTime: '6 min',
-          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/nature-as-our-guide-how-eringer-switzerland-selects-powerful-pure-and-responsible-ingredients',
+          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/powerful-pure-responsible',
         },
         {
           title: 'Innovation suisse : l\'engagement ERINGER SWITZERLAND pour une beauté honnête, responsable et efficace',
@@ -339,7 +339,7 @@ export const translations = {
           category: 'Durabilité',
           date: '13 octobre 2025',
           readTime: '7 min',
-          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/swiss-innovation-the-eringer-switzerland-commitment-to-honest-responsible-and-effective-beauty',
+          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/swiss-innovation-transparent-responsible-beauty',
         },
       ],
     },
