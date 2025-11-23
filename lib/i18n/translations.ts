@@ -640,7 +640,7 @@ export const translations = {
       posts: [
         {
           title: 'Alpine Actives: Why ERINGER SWITZERLAND Chooses Ingredients That Outperform Conventional Skincare',
-          excerpt: 'Our researchers reveal how Alpine plants, exposed to extreme conditions, develop rare molecules capable of improving skin firmness, hydration, and radiance. Precision science in service of beauty.',
+          excerpt: 'Our researchers reveal how alpine plants, exposed to extreme conditions, develop rare molecules capable of improving skin firmness, hydration and radiance. A precision-driven science dedicated to beauty.',
           category: 'Science',
           date: 'November 17, 2025',
           readTime: '5 min',
@@ -648,7 +648,7 @@ export const translations = {
         },
         {
           title: 'The ERINGER SWITZERLAND Philosophy: Creating Skincare That Combines Nature, Science and Sensory Excellence',
-          excerpt: 'Between naturality, clinical efficacy, and formulation ethics, ERINGER SWITZERLAND explains how each product is designed to offer an unparalleled sensory experience, in harmony with skin and nature.',
+          excerpt: 'Between naturality, clinical efficiency and ethical formulation, ERINGER SWITZERLAND explains how every product is designed to offer a sensory experience in perfect harmony with skin and nature.',
           category: 'Philosophy',
           date: 'November 10, 2025',
           readTime: '6 min',
@@ -656,7 +656,7 @@ export const translations = {
         },
         {
           title: 'The Power of Immortelle: The Timeless Flower at the Heart of ERINGER SWITZERLAND\'s Anti-Aging Rituals',
-          excerpt: 'Focus on one of the most powerful ingredients in our formulas. This flower, resistant to time and elements, brings exceptional regenerative capacity to the skin — the heart of our anti-aging range.',
+          excerpt: 'Focus on one of the most powerful ingredients in our formulas. This flower, resistant to time and the elements, brings exceptional regenerative power — the heart of our anti-aging range.',
           category: 'Ingredients',
           date: 'November 3, 2025',
           readTime: '5 min',
@@ -664,7 +664,7 @@ export const translations = {
         },
         {
           title: 'Exceptional Textures: How ERINGER SWITZERLAND Designs a Unique Sensory Experience',
-          excerpt: 'Dive into the world of ERINGER textures — airy creams, melting gels, luminous pearls. A meticulous work between science and emotion, designed to enhance every gesture of your routine.',
+          excerpt: 'Dive into the world of ERINGER textures — airy creams, melting gels, luminous pearls. A meticulous balance between science and emotion, crafted to elevate every moment of your skincare ritual.',
           category: 'Craftsmanship',
           date: 'October 27, 2025',
           readTime: '4 min',
@@ -672,19 +672,19 @@ export const translations = {
         },
         {
           title: 'Nature as our Guide: How ERINGER SWITZERLAND Selects Powerful, Pure and Responsible Ingredients',
-          excerpt: 'From mountain to your skin: how we select the purest plants, the most mineral-rich waters, and the most effective actives, directly inspired by the Alpine ecosystem.',
+          excerpt: 'From mountain to skin: how we select the purest plants, the richest mineral waters, and the most powerful natural actives — directly inspired by the alpine ecosystem.',
           category: 'Nature',
           date: 'October 20, 2025',
           readTime: '6 min',
           url: 'https://shop.eringerswitzerland.ch/blogs/news/nature-as-our-guide-how-eringer-switzerland-selects-powerful-pure-and-responsible-ingredients',
         },
         {
-          title: 'Swiss Innovation: Our Commitments to Transparent and Responsible Cosmetics',
-          excerpt: 'A clear vision: clean formulas, traced ingredients, controlled production, rigorous testing. ERINGER SWITZERLAND reveals its sustainable commitments for beauty that is as authentic as it is effective.',
+          title: 'Swiss Innovation: The ERINGER SWITZERLAND Commitment to Honest, Responsible and Effective Beauty',
+          excerpt: 'A clear vision: clean formulas, traceable ingredients, controlled production, rigorous testing. ERINGER SWITZERLAND reveals its sustainable commitments for beauty that is both authentic and effective. Swiss innovation is defined by...',
           category: 'Sustainability',
           date: 'October 13, 2025',
           readTime: '7 min',
-          url: 'https://shop.eringerswitzerland.ch/blogs/news',
+          url: 'https://shop.eringerswitzerland.ch/blogs/news/swiss-innovation-the-eringer-switzerland-commitment-to-honest-responsible-and-effective-beauty',
         },
       ],
     },
