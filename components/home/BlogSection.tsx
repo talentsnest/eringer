@@ -78,10 +78,10 @@ export default function BlogSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <a
-                  href={`${baseUrl}/blogs/news`}
+                  href={post.url || `${baseUrl}/blogs/news`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(e) => handleTrackedClick(e, `${baseUrl}/blogs/news`, post.title, 'external')}
+                  onClick={(e) => handleTrackedClick(e, post.url || `${baseUrl}/blogs/news`, post.title, 'external')}
                 >
                   <div className="p-4 bg-white rounded-xl border border-gray-100 hover:border-gold-200 hover:shadow-md transition-all duration-300">
                     <div className="flex items-start gap-3">

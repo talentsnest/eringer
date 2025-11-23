@@ -299,6 +299,7 @@ export const translations = {
           category: 'Science',
           date: '17 novembre 2025',
           readTime: '5 min',
+          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/alpine-actives-why-eringer-switzerland-chooses-ingredients-that-outperform-conventional-skincare',
         },
         {
           title: 'Inside ERINGER : La philosophie qui guide la création de chaque formule',
@@ -306,6 +307,7 @@ export const translations = {
           category: 'Philosophie',
           date: '10 novembre 2025',
           readTime: '6 min',
+          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/the-eringer-switzerland-philosophy-creating-skincare-that-combines-nature-science-and-sensory-excellence',
         },
         {
           title: 'L\'Immortelle Dorée : Le secret anti-âge qui a inspiré toute une collection',
@@ -313,6 +315,7 @@ export const translations = {
           category: 'Ingrédients',
           date: '3 novembre 2025',
           readTime: '5 min',
+          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/the-power-of-immortelle-the-timeless-flower-at-the-heart-of-eringer-switzerlands-anti-aging-rituals',
         },
         {
           title: 'Textures d\'exception : Comment nous créons la sensorialité unique ERINGER',
@@ -320,6 +323,7 @@ export const translations = {
           category: 'Savoir-faire',
           date: '27 octobre 2025',
           readTime: '4 min',
+          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/exceptional-textures-how-eringer-switzerland-designs-a-unique-sensory-experience',
         },
         {
           title: 'ERINGER Alpine Journal : La nature comme laboratoire à ciel ouvert',
@@ -327,6 +331,7 @@ export const translations = {
           category: 'Nature',
           date: '20 octobre 2025',
           readTime: '6 min',
+          url: 'https://shop.eringerswitzerland.ch/fr/blogs/news/nature-as-our-guide-how-eringer-switzerland-selects-powerful-pure-and-responsible-ingredients',
         },
         {
           title: 'Innovation suisse : Nos engagements pour une cosmétique transparente et responsable',
@@ -633,39 +638,44 @@ export const translations = {
       min: 'min',
       posts: [
         {
-          title: 'ERINGER Lab Notes: Why Our Alpine Actives Surpass Skincare Standards',
+          title: 'Alpine Actives: Why ERINGER SWITZERLAND Chooses Ingredients That Outperform Conventional Skincare',
           excerpt: 'Our researchers reveal how Alpine plants, exposed to extreme conditions, develop rare molecules capable of improving skin firmness, hydration, and radiance. Precision science in service of beauty.',
           category: 'Science',
           date: 'November 17, 2025',
           readTime: '5 min',
+          url: 'https://shop.eringerswitzerland.ch/blogs/news/alpine-actives-why-eringer-switzerland-chooses-ingredients-that-outperform-conventional-skincare',
         },
         {
-          title: 'Inside ERINGER: The Philosophy Guiding Every Formula Creation',
+          title: 'The ERINGER SWITZERLAND Philosophy: Creating Skincare That Combines Nature, Science and Sensory Excellence',
           excerpt: 'Between naturality, clinical efficacy, and formulation ethics, ERINGER SWITZERLAND explains how each product is designed to offer an unparalleled sensory experience, in harmony with skin and nature.',
           category: 'Philosophy',
           date: 'November 10, 2025',
           readTime: '6 min',
+          url: 'https://shop.eringerswitzerland.ch/blogs/news/the-eringer-switzerland-philosophy-creating-skincare-that-combines-nature-science-and-sensory-excellence',
         },
         {
-          title: 'Golden Immortelle: The Anti-Aging Secret That Inspired an Entire Collection',
+          title: 'The Power of Immortelle: The Timeless Flower at the Heart of ERINGER SWITZERLAND\'s Anti-Aging Rituals',
           excerpt: 'Focus on one of the most powerful ingredients in our formulas. This flower, resistant to time and elements, brings exceptional regenerative capacity to the skin — the heart of our anti-aging range.',
           category: 'Ingredients',
           date: 'November 3, 2025',
           readTime: '5 min',
+          url: 'https://shop.eringerswitzerland.ch/blogs/news/the-power-of-immortelle-the-timeless-flower-at-the-heart-of-eringer-switzerlands-anti-aging-rituals',
         },
         {
-          title: 'Exceptional Textures: How We Create the Unique ERINGER Sensoriality',
+          title: 'Exceptional Textures: How ERINGER SWITZERLAND Designs a Unique Sensory Experience',
           excerpt: 'Dive into the world of ERINGER textures — airy creams, melting gels, luminous pearls. A meticulous work between science and emotion, designed to enhance every gesture of your routine.',
           category: 'Craftsmanship',
           date: 'October 27, 2025',
           readTime: '4 min',
+          url: 'https://shop.eringerswitzerland.ch/blogs/news/exceptional-textures-how-eringer-switzerland-designs-a-unique-sensory-experience',
         },
         {
-          title: 'ERINGER Alpine Journal: Nature as an Open-Air Laboratory',
+          title: 'Nature as our Guide: How ERINGER SWITZERLAND Selects Powerful, Pure and Responsible Ingredients',
           excerpt: 'From mountain to your skin: how we select the purest plants, the most mineral-rich waters, and the most effective actives, directly inspired by the Alpine ecosystem.',
           category: 'Nature',
           date: 'October 20, 2025',
           readTime: '6 min',
+          url: 'https://shop.eringerswitzerland.ch/blogs/news/nature-as-our-guide-how-eringer-switzerland-selects-powerful-pure-and-responsible-ingredients',
         },
         {
           title: 'Swiss Innovation: Our Commitments to Transparent and Responsible Cosmetics',
