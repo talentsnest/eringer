@@ -31,7 +31,6 @@ export default function Header() {
   const { t } = useTranslation()
   const navigation = getNavigation(t)
   const isHome = pathname?.endsWith('/') || pathname?.split('/').length === 2
-  const [logoVersion] = useState(() => Date.now())
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +61,7 @@ export default function Header() {
               className="group flex items-center cursor-pointer"
             >
               <img
-                src={`/images/logo.png?ts=${logoVersion}`}
+                src="/images/logo.png"
                 alt="ERINGER SWITZERLAND"
                 width={300}
                 height={80}

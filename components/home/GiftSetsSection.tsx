@@ -337,11 +337,11 @@ export default function GiftSetsSection() {
       ? 'https://shop.eringerswitzerland.ch/fr/products/coffret-anti-age'
       : 'https://shop.eringerswitzerland.ch/products/coffret-anti-age',
     tags: translations.products?.['coffret-anti-aging']?.tags || [],
-    productImages: [
-      '/images/packaging/gelee-package.png',
-      '/images/packaging/masque anti age.png',
-      '/images/packaging/serum anti-age.png',
-    ],
+productImages: [
+        '/images/packaging/gelee-package.webp',
+        '/images/packaging/masque anti age.webp',
+        '/images/packaging/serum anti-age.webp',
+      ],
     productInfos,
   }
 
@@ -351,7 +351,7 @@ export default function GiftSetsSection() {
       <div 
         className="relative w-full py-16 lg:py-24"
         style={{
-          backgroundImage: 'url(/images/mountains2.png)',
+          backgroundImage: 'url(/images/mountains2.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
