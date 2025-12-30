@@ -6,6 +6,7 @@ export const translations = {
       antiAging: 'Anti-Âge',
       cleaning: 'Nettoyage',
       body: 'Corps',
+      giftSets: 'Coffrets',
       bestSellers: 'Meilleures ventes',
     },
     // Hero Section
@@ -359,6 +360,7 @@ export const translations = {
       antiAging: 'Anti-Aging',
       cleaning: 'Cleansing',
       body: 'Body',
+      giftSets: 'Gift Sets',
       bestSellers: 'Best Sellers',
     },
     // Hero Section

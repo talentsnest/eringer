@@ -12,6 +12,7 @@ const getNavigation = (t: (key: string) => string) => [
   { name: t('nav.antiAging'), sectionId: 'antiAging' },
   { name: t('nav.cleaning'), sectionId: 'nettoyage' },
   { name: t('nav.body'), sectionId: 'corps' },
+  { name: t('nav.giftSets'), sectionId: 'gift-sets' },
   { name: t('nav.bestSellers'), sectionId: 'best-sellers' },
 ]
 

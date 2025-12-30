@@ -346,7 +346,7 @@ export default function GiftSetsSection() {
   }
 
   return (
-    <section className="bg-white">
+    <section id="gift-sets" className="bg-white">
       {/* Hero Section with Mountains Background - Full Width */}
       <div 
         className="relative w-full py-16 lg:py-24"
