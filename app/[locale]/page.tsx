@@ -6,6 +6,7 @@ import BestSellers from '@/components/home/BestSellers' // Charger immédiatemen
 
 // Charger les sections importantes immédiatement pour éviter le scrolling saccadé
 import IngredientsSection from '@/components/home/IngredientsSection'
+import GiftSetsSection from '@/components/home/GiftSetsSection'
 import TestimonialsSection from '@/components/home/TestimonialsSection'
 import MediaSection from '@/components/home/MediaSection'
 import BestSellersSection from '@/components/home/BestSellersSection'
@@ -22,6 +23,10 @@ const WhereToFindUsSection = dynamic(
   }
 )
 
+export async function generateStaticParams() {
+  return [{ locale: 'fr' }, { locale: 'en' }]
+}
+
 export default function Home() {
   return (
     <>
@@ -31,6 +36,9 @@ export default function Home() {
       </div>
       <div id="ingredients">
       <IngredientsSection />
+      </div>
+      <div id="gift-sets">
+      <GiftSetsSection />
       </div>
       <div id="testimonials">
       <TestimonialsSection />

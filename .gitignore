@@ -78,6 +78,14 @@ public/videos/*.webm
 !public/videos/gel-anti-cellulite-2.webm
 !public/videos/gel-anti-cellulite-3.mp4
 !public/videos/gel-anti-cellulite-3.webm
+!public/videos/box1.mp4
+!public/videos/box2.mp4
+
+# Backup and original files
+public/_originals/
+
+# Analytics data (local tracking)
+data/analytics.json
 
 # Unnecessary files
 *.docx

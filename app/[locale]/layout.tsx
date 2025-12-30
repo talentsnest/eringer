@@ -9,6 +9,10 @@ import LangUpdater from '@/components/ui/LangUpdater'
 import { LoaderProvider } from '@/contexts/LoaderContext'
 import { Locale } from '@/lib/i18n/translations'
 
+export async function generateStaticParams() {
+  return [{ locale: 'fr' }, { locale: 'en' }]
+}
+
 export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
   const { locale } = await params
   

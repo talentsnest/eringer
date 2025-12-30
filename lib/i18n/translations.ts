@@ -42,6 +42,8 @@ export const translations = {
       cleaningSubtitle: 'Une peau pure et équilibrée',
       body: 'Corps & Soins Spécialisés',
       bodySubtitle: 'Prenez soin de votre corps',
+      giftSets: 'Coffrets cadeau',
+      giftSetsSubtitle: 'Offrez le meilleur',
     },
     // Footer
     footer: {
@@ -59,6 +61,7 @@ export const translations = {
       viewAll: 'Voir tout',
       bestSeller: 'Meilleures ventes',
       switzerland: 'Suisse',
+      learnMore: 'En savoir plus',
     },
     // Products
     products: {
@@ -126,6 +129,11 @@ export const translations = {
         name: 'Stick Lèvres Douceur et Protection',
         description: 'Baume à lèvres aux ingrédients naturels pour douceur et protection',
         tags: ['Soin des lèvres', 'Beurre de cacao', 'Cire d\'abeille', 'Huile de coco', 'Vanille'],
+      },
+      'coffret-anti-aging': {
+        name: 'Coffret Anti-Aging',
+        description: 'Ce set exclusif rassemble les essentiels de notre gamme anti-âge pour une routine complète et efficace, conçue pour adoucir, raffermir et raviver la jeunesse de la peau.',
+        tags: ['Anti-âge', 'Routine complète', 'Coffret cadeau'],
       },
     },
     // Ingredients
@@ -387,6 +395,8 @@ export const translations = {
       cleaningSubtitle: 'Pure and balanced skin',
       body: 'Body & Specialized Care',
       bodySubtitle: 'Take care of your body',
+      giftSets: 'Gift Sets',
+      giftSetsSubtitle: 'Give the best',
     },
     // Footer
     footer: {
@@ -404,6 +414,7 @@ export const translations = {
       viewAll: 'View All',
       bestSeller: 'Best Seller',
       switzerland: 'Switzerland',
+      learnMore: 'More details',
     },
     // Products
     products: {
@@ -471,6 +482,11 @@ export const translations = {
         name: 'Lip Balm Softness & Protection',
         description: 'Natural ingredient lip balm for softness and protection',
         tags: ['Lip care', 'Cocoa butter', 'Beeswax', 'Coconut oil', 'Vanilla'],
+      },
+      'coffret-anti-aging': {
+        name: 'Anti-Aging Gift Set',
+        description: 'This exclusive set brings together the essentials of our anti-aging range for a complete and effective routine, designed to soften, firm and restore the youthfulness of the skin.',
+        tags: ['Anti-aging', 'Complete routine', 'Gift set'],
       },
     },
     // Ingredients

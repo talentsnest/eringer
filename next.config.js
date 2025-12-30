@@ -2,6 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   
+  // Exclude backup folders from the build
+  webpack: (config, { isServer }) => {
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: ['**/website/**', '**/node_modules/**'],
+    }
+    return config
+  },
+  
   // Compression activée
   compress: true,
   
